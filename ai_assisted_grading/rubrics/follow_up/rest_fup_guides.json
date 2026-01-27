@@ -1,0 +1,39 @@
+{
+  "follow_up_question": [
+    {
+      "question": "¿Me contarías brevemente por qué es que la sede Norte está recibiendo malos puntajes en la plataforma de envíos?",
+      "correct_answer": "Sí. El problema es que en la sucursal Norte, los empleados de plancha tienen menor antigüedad. Esto sugiere que la mayoría del personal en plancha de Norte es nuevo y probablemente aún no está familiarizado con los procesos, lo que podría explicar las demoras en la preparación."
+    }
+  ],
+  "content_rubric": [
+    {
+      "score": 0,
+      "description": "La respuesta es incorrecta: no identifica el mecanismo causal correcto que genera el problema, y/o introduce explicaciones irrelevantes o equivocadas.",
+      "example1": "Sí, la sucursal Norte presenta una mayor cantidad de empleados en el área de ensamblado. Esto podría estar entorpeciendo la producción y retrasando la preparación de los pedidos.",
+      "explanation1": "No identifica el mecanismo causal central detrás del problema (la menor antigüedad en plancha) y propone una causa que no aparece en el caso.",
+      "example2": "Por lo que estuve revisando, el problema parece venir del sector de atención al cliente. Es posible que quienes reciben los pedidos estén cometiendo errores o tardando demasiado, y eso impacta negativamente en los puntajes.",
+      "explanation2": "No identifica el área correcta ni el mecanismo relevante; atribuye el problema a un sector que no aparece en el caso.",
+      "example3": "Buen día, requerimos aumentar la experiencia del personal y la cantidad de repartidores.",
+      "explanation3": "No identifica el mecanismo correcto y agrega causas irrelevantes, como la necesidad de más repartidores, que no aparecen en el caso."
+    },
+    {
+      "score": 1,
+      "description": "La respuesta es correcta pero incompleta: menciona parte de la idea central que subyace al problema, pero no desarrolla el mecanismo causal relevante de manera clara o deja elementos esenciales sin explicar.",
+      "example1": "El problema está en que la sucursal Norte tiene empleados menos experimentados.",
+      "explanation1": "Reconoce que el personal del Norte tiene menos experiencia, pero no especifica que esto ocurre en el área de plancha ni explica cómo esa falta de antigüedad genera los malos puntajes.",
+      "example2": "En la sede Norte el personal de plancha es bastante nuevo y todavía no tiene suficiente práctica, por eso probablemente están teniendo dificultades en el rol.",
+      "explanation2": "Menciona la falta de experiencia en plancha, pero no explica cómo eso genera demoras ni cómo esas demoras producen los malos puntajes.",
+      "example3": "Hola Ramiro, en la zona de plancha el equipo todavía es bastante inexperto, y creo que ese es el problema.",
+      "explanation3": "Menciona que el personal de plancha carece de experiencia, pero no explica cómo esa falta de práctica genera demoras ni cómo esas demoras derivan en los malos puntajes."
+    },
+    {
+      "score": 2,
+      "description": "La respuesta es correcta y completa: identifica claramente la idea central que subyace al problema y explica de manera precisa el mecanismo causal relevante, conectando todos los elementos necesarios para justificar la conclusión.",
+      "note": "Se aceptan formulaciones equivalentes a 'baja antigüedad' como 'son muy nuevos', 'les falta experiencia', 'no tienen práctica' u otros sinónimos, siempre que se identifique correctamente el área relevante (plancha) y se explique que la falta de experiencia causa demoras en la preparación, lo cual genera los malos puntajes.",
+      "example1": "Los empleados en plancha de la sucursal Norte presentan poca antigüedad. Esta falta de experiencia es lo que, probablemente, explica que la sucursal Norte presente tiempos de preparado mayores en promedio y, por lo tanto, malos puntajes en la plataforma de envíos.",
+      "explanation1": "Identifica la falta de antigüedad específicamente en plancha y explica claramente cómo esto produce tiempos de preparado mayores y malos puntajes.",
+      "example2": "Por lo que estuve analizando, el inconveniente surge en el proceso de preparación de los pedidos: el personal de plancha tiene poca experiencia y eso provoca retrasos, lo que termina afectando el desempeño general de la sucursal.",
+      "explanation2": "Identifica correctamente que el problema está en plancha y explica que la falta de experiencia del personal genera retrasos en la preparación, articulando el mecanismo causal que deriva en el bajo desempeño de la sucursal."
+    }
+  ]
+}

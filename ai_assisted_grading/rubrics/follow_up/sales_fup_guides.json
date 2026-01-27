@@ -1,0 +1,38 @@
+{
+  "follow_up_question": [
+    {
+      "question": "¿Me contarías brevemente por qué es que no estamos vendiendo más estufas en invierno y ventiladores portátiles en verano?",
+      "correct_answer": "Sí. En 2024, durante los meses donde cada producto tiene mayor demanda, las estufas y los ventiladores no fueron incluidos en los envíos publicitarios. Esto probablemente hizo que los clientes no recibieran recordatorios u ofertas de estos productos en el momento de mayor necesidad, llevando a menores ventas en los meses donde uno esperaría que las ventas fuesen mayores."
+    }
+  ],
+  "content_rubric": [
+    {
+      "score": 0,
+      "description": "La respuesta es incorrecta: no identifica el mecanismo causal correcto que genera el problema, y/o introduce explicaciones irrelevantes o equivocadas.",
+      "example1": "Sí, la falta de estacionalidad en las ventas de los ventiladores podría explicarse por una modificación en las preferencias de los consumidores que, por las condiciones macroeconómicas, ahora eligen los aires acondicionados.",
+      "explanation1": "No identifica el problema real, ya que atribuye las bajas ventas a un cambio en preferencias o aires acondicionados, causas que no aparecen en el caso, e ignora completamente el rol de la publicidad estacional.",
+      "example2": "Las bajas ventas probablemente se explican por las limitaciones para ingresar productos importados al país, lo que redujo la disponibilidad y afectó la demanda.",
+      "explanation2": "Atribuye el problema a restricciones de importación equivocadamente e ignora el rol de la publicidad estacional.",
+      "example3": "Las ventas bajaron porque no estamos haciendo suficiente publicidad en general; habría que aumentar la cantidad de anuncios.",
+      "explanation3": "Atribuye el problema a una falta de publicidad en términos generales, pero no identifica que el error concreto fue no incluir estufas y ventiladores en los envíos publicitarios durante los meses de mayor demanda."
+    },
+    {
+      "score": 1,
+      "description": "La respuesta es correcta pero incompleta: menciona parte de la idea central que subyace al problema, pero no desarrolla el mecanismo causal relevante de manera clara o deja elementos esenciales sin explicar.",
+      "example1": "Sí, el problema pareciera ser la estrategia de marketing.",
+      "explanation1": "Identifica que el problema está vinculado al marketing, pero no explica que el error específico fue no incluir estufas y ventiladores en los envíos publicitarios durante los meses de mayor demanda.",
+      "example2": "Por lo que estuve viendo, el problema parece venir de cómo se estuvieron promocionando los productos, porque la comunicación no estuvo bien alineada con las temporadas.",
+      "explanation2": "Reconoce que el problema está relacionado con la promoción y la estacionalidad, pero no especifica que el error concreto fue no incluir estufas y ventiladores en los envíos publicitarios durante los meses de mayor demanda ni explica el mecanismo causal completo.",
+      "example3": "El problema parece estar en el calendario de publicidad: las promociones no se enviaron en las fechas adecuadas y eso hizo que los productos no se comunicaran en la temporada correcta.",
+      "explanation3": "Menciona que la publicidad no estuvo alineada con la temporada, pero no identifica que el error específico fue no incluir estufas y ventiladores en los envíos publicitarios durante los meses de mayor demanda ni desarrolla el mecanismo causal completo."
+    },
+    {
+      "score": 2,
+      "description": "La respuesta es correcta y completa: identifica claramente la idea central que subyace al problema y explica de manera precisa el mecanismo causal relevante, conectando todos los elementos necesarios para justificar la conclusión.",
+      "example1": "Sí, el problema radica en el diseño de nuestra estrategia de marketing. Mientras que en 2023 logramos que la publicidad acompañara adecuadamente el patrón estacional, en 2024 esto no ocurrió, lo que nos impidió aprovechar los picos de demanda de los ventiladores, en verano, y de las estufas, en invierno.",
+      "explanation1": "Identifica correctamente que la publicidad no acompañó la estacionalidad en 2024 y explica cómo ese desajuste provocó la caída en ventas de los productos que dependen fuertemente de la demanda estacional.",
+      "example2": "El inconveniente se debe a que en 2024 la publicidad no acompañó la estacionalidad: las estufas no fueron incluidas en las campañas de invierno y los ventiladores no aparecieron en las campañas de verano, lo que hizo que los clientes no recibieran los recordatorios adecuados en los meses de mayor demanda.",
+      "explanation2": "Explica de manera precisa que la publicidad no incluyó estufas en invierno ni ventiladores en verano, identificando el error estacional y el mecanismo causal que llevó a la caída en ventas."
+    }
+  ]
+}

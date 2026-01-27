@@ -1,0 +1,275 @@
+{ 
+  "task_context": {
+    "description": "Trabajás en la gestión de un local de delivery de hamburguesas premium que cuenta con dos sucursales (Norte y Sur). Cada sucursal tiene sus propios empleados, que venden hamburguesas únicamente a través de una plataforma de envíos (al estilo de PedidosYa). Ayer recibiste el siguiente correo electrónico de tu jefe:",
+    "email_from_boss": "De: Ramiro González <rgonzalez@gmail.com>\nAsunto: problema con reseñas online\nHola, ¿cómo estás?\nTe escribo porque me puse a revisar las opiniones online de nuestras sucursales, y estoy un poco preocupado por la sucursal Norte: en las últimas semanas estuvimos recibiendo bajas puntuaciones debido a demoras excesivas en el envío. ¿Podrías ayudarme a entender lo que está pasando?\nAdjunto un informe que preparó mi asistente para ayudarnos a entender mejor la situación. A partir de los datos de este informe, me gustaría que me compartas tu mirada sobre los siguientes puntos:\n¿Podrías revisar si el problema viene de la plataforma de envíos?\n¿Puede ser que la sucursal Norte tenga más pedidos que la sucursal Sur, o que haya habido un mayor aumento en el número de pedidos en esta sucursal? ¿O no hay diferencias entre sucursales en los pedidos?\n¿Algo más del informe te parece relevante para entender lo que está pasando?\nPor favor fundamentá bien tus respuestas, ya que planeo compartir este diagnóstico con otros miembros del equipo.\nPor último, según tu análisis, ¿qué sugerirías que hagamos para solucionar este problema?\nSaludos,\nRamiro",
+    "informe_adjunto":{
+      "resumen": "Resumen del problema: En las últimas semanas la sucursal Norte estuvo recibiendo bajas puntuaciones debido a demoras excesivas en el envío.",
+      "grafico": "1) Número diario de pedidos en las últimas tres semanas en las sucursales Norte y Sur:\nhttps://i.imgur.com/Hy1Buun.png",
+      "tabla1": "2) Información sobre los tiempos de preparación y entrega para cada una de las sucursales en las últimas dos semanas (proporcionada por la plataforma de envíos):\nSucursal Sur\nTiempo promedio de toma del pedido: 9 minutos\nTiempo promedio de preparado en el local: 18 minutos\nTiempo promedio de entrega (desde entrega al repartidor hasta entrega al cliente): 13 minutos\n Sucursal Norte\n Tiempo promedio de toma del pedido: 10 minutos\nTiempo promedio de preparado en el local: 29 minutos\nTiempo promedio de entrega (desde entrega al repartidor hasta entrega al cliente): 15 minutos",
+      "tabla2": "3) Número de empleados y su antigüedad promedio en cada una de las sucursales:\\n\\n\\begin{tabular}{l cccc}\\n\\toprule\\n& \\multicolumn{2}{c}{\\textbf{Sucursal Norte}} & \\multicolumn{2}{c}{\\textbf{Sucursal Sur}} \\\\\\n\\cmidrule(lr){2-3} \\cmidrule(lr){4-5}\\n& \\textbf{\\makecell{Número de \\\\ empleados}} & \\textbf{\\makecell{Antigüedad promedio \\\\ (en meses)}} & \\textbf{\\makecell{Número de \\\\ empleados}} & \\textbf{\\makecell{Antigüedad promedio \\\\ (en meses)}} \\\\\\n\\midrule\\nEmpleados en plancha & 2 & 0.5 & 2 & 4.0 \\\\\\nEmpleados en ensamblado & 4 & 12.0 & 3 & 5.0 \\\\\\nEmpleados de limpieza & 6 & 15.0 & 7 & 7.0 \\\\\\n\\midrule\\n\\textbf{Total} & \\textbf{12} & \\textbf{11.6} & \\textbf{12} & \\textbf{6.0} \\\\\\n\\bottomrule\\n\\end{tabular}"},
+    "consigna": "Escribí a continuación un correo con la respuesta a Ramiro:\nPara: Ramiro González\nAsunto: Re: problema con reseñas online"
+  },
+  "content": {
+    "diagnosis": {
+      "max_points": 6,
+      "questions": {
+        "A1": {
+          "prompt": "¿Podrías revisar si el problema viene de la plataforma de envíos?",
+          "correct_answer": "Como puede verse en el informe, el tiempo promedio de toma de pedido y el tiempo promedio de entrega son casi iguales en ambas sucursales, por lo que el mal desempeño de la sucursal Norte no puede ser por un problema de la plataforma de pedidos. También se puede ver que el tiempo promedio de preparado en el local es mucho más alto en la sucursal Norte, lo que indica que el problema viene de demoras internas en la sucursal Norte.",
+          "note": "**Debe mencionar** a la plataforma de envíos para recibir puntos en esta pregunta. En caso contrario debe recibir 0 puntos en esta pregunta. Aludir a la causa real del problema no alcanza para recibir un punto en este inciso. No hace falta que se proporcionen ejemplos numéricos para que la respuesta esté completa (2 puntos), pero si debe hacerse referencia a los datos proporcionados.",
+          "scores": {
+            "0": {
+              "label": "No responde correctamente. No menciona a la plataforma de envíos.",
+              "example": "La sucursal Norte presenta menor tiempo promedio de preparado en el local, por lo tanto, el problema parece ser de la plataforma de envíos.",
+              "explanation": "La respuesta no menciona correctamente la plataforma de envíos ni usa los datos del informe. Además, interpreta mal la evidencia: el tiempo de preparación es mayor en Norte, no menor. Esto demuestra que no responde a la pregunta y no identifica la causa real del problema."
+            },
+            "1": {
+              "label": "Menciona la respuesta correcta y a la plataforma de envíos, pero de manera superficial.",
+              "example": "Sí, la información provista sugiere que el problema no proviene de la plataforma de envíos.",
+              "explanation": "Menciona la plataforma de envíos y la conclusión correcta, pero de manera superficial. No utiliza datos concretos del informe (tiempos de toma o de entrega) ni explica por qué la plataforma queda descartada como causa del problema."
+            },
+            "2": {
+              "label": "Menciona la respuesta correcta de manera detallada y a la plataforma de envíos, y justifica adecuadamente.",
+              "example": "Sí, como puede observarse en la información adjunta, los tiempos promedio de toma y entrega del pedido son prácticamente iguales en ambas sedes. La única diferencia radica en el tiempo promedio de preparado del pedido que es superior en la sucursal Norte. Esto indica que el problema no proviene de un mal funcionamiento de la plataforma de envíos.",
+              "explanation": "Usa correctamente los datos del informe para descartar la plataforma: compara los tiempos de toma y entrega entre sucursales y señala que la diferencia aparece únicamente en el tiempo de preparación en el local. La respuesta es clara, específica y basada en evidencia, lo que justifica adecuadamente la conclusión."
+            }
+          }
+        },
+        "A2": {
+          "prompt": "¿Puede ser que la sucursal Norte tenga más pedidos que la sucursal Sur, o que haya habido un mayor aumento en el número de pedidos en esta sucursal? ¿O no hay diferencias entre sucursales en los pedidos?",
+          "correct_answer": "Como puede verse en el gráfico, ambas sucursales tienen un número similar de pedidos. Si bien en los últimos días aumentó la cantidad de pedidos, este aumento fue similar en ambas sucursales (y el aumento hasta fue un poco menor en la Norte). Por lo tanto, esto no puede ser un causante del mal desempeño de esa sucursal.",
+          "note": "**Debe mencionar** la evolución de las ventas de ambas sedes. Aludir a la causa real del problema no alcanza para recibir un punto en este inciso. Decir que los pedidos bajaron en cualquiera de las dos sucursales es incorrecto e implica una asignación de 0 puntos en este criterio. No hace falta que se proporcionen ejemplos numéricos para que la respuesta esté completa (2 puntos), pero si debe hacerse referencia a los datos proporcionados.",
+          "scores": {
+            "0": {
+              "label": "No responde correctamente",
+              "example": "Sí, el gráfico muestra que hasta la semana del 21 de enero los pedidos eran muy similares en ambas sucursales. Sin embargo, a partir de esa semana se observa un aumento en los pedidos en ambas, siendo dicho incremento más marcado en la sucursal Norte.",
+              "explanation": "La respuesta interpreta incorrectamente los datos: afirma que el aumento es más marcado en la sucursal Norte, lo cual contradice el gráfico. Esto implica una lectura errónea de la evidencia y lleva a una conclusión equivocada sobre el origen del problema. Por eso recibe 0 puntos."
+            },
+            "1": {
+              "label": "Menciona la respuesta correcta, pero de manera superficial",
+              "example": "No, por lo que se puede ver en el gráfico la cantidad de pedidos en la sucursal Norte es menor.",
+              "explanation": "Menciona la conclusión correcta —que los pedidos no explican el problema— pero de forma superficial y sin describir la evolución en ambas sucursales. Además, la afirmación sobre que “Norte tiene menos pedidos” es incompleta y poco precisa respecto a los datos reales."
+            },
+            "2": {
+              "label": "Menciona la respuesta correcta de manera detallada, y justifica adecuadamente",
+              "example": "No, por lo que se puede ver en el gráfico adjuntado, la cantidad de pedidos es muy similar en ambas sucursales hasta la semana del 21 de enero. Luego de ello comienza un aumento de los pedidos que es más pronunciado en la sucursal Sur. Si bien existe una diferencia en el número de pedidos entre ambas sedes, esta beneficia a la sucursal Norte.",
+              "explanation": "La respuesta describe detalladamente la evolución de los pedidos en ambas sucursales, usa la información del gráfico de forma precisa y explica por qué los pedidos no pueden justificar el mal desempeño de Norte. Menciona tanto el nivel como el aumento de los pedidos, cumpliendo plenamente con los requisitos del criterio."
+            }
+          }
+        },
+        "A3": {
+          "prompt": "¿Algo más del informe te parece relevante para entender lo que está pasando?",
+          "correct_answer": "Sí. Como puede verse en la tabla, la principal diferencia entre empleados de ambas sedes que podría estar explicando el mal funcionamiento de la sede Norte es que en la sucursal Norte, los empleados de plancha tienen menor antigüedad (0.5 meses en promedio, vs. 4 en la sucursal Sur). Esto sugiere que la mayoría del personal en plancha de Norte es nuevo y probablemente aún no está familiarizado con los procesos, lo que podría explicar las demoras en la preparación.",
+          "note": "No hace falta que se proporcionen ejemplos numéricos para que la respuesta esté completa (2 puntos), pero si debe hacerse referencia a los datos proporcionados.",
+          "scores": {
+            "0": {
+              "label": "No responde correctamente.",
+              "example": "Sí, las diferencias en las ventas entre ambas sedes probablemente se deban a la composición del personal. Es probable que los empleados de la sucursal Norte, perciban ingresos más bajos que los empleados de la sucursal Sur, lo que podría explicar el menor nivel de desempeño en la sucursal Norte.",
+              "explanation": "La respuesta no utiliza la información relevante del informe: introduce hipótesis ajenas al problema y no se refiere a la antigüedad del personal de plancha."
+            },
+            "1": {
+              "label": "Menciona la respuesta correcta, pero de manera superficial.",
+              "example": "Los empleados de la sucursal Norte se encuentran menos capacitados que los empleados de la sucursal Sur.",
+              "explanation": "Menciona la idea central —que el personal de la sucursal Norte tiene menos experiencia— pero de manera superficial y sin apoyarse explícitamente en los datos del informe. No hace referencia a la diferencia de antigüedad en plancha, que es el punto clave."
+            },
+            "2": {
+              "label": "Menciona la respuesta correcta de manera detallada, y justifica adecuadamente.",
+              "example": "La tabla de la composición de la planta de trabajadores de cada sucursal muestra que los empleados en plancha de la sucursal Norte presentan mucha menos antigüedad que los empleados en plancha de la sucursal Sur. Mientras que en la primera la antigüedad promedio de estos trabajadores es de 0.5 meses, en la segunda es de 4 meses. Esta falta de experiencia es lo que, probablemente, explica que la sucursal Norte presente tiempos de preparado mayores en promedio.",
+              "explanation": "Usa de manera precisa los datos del informe: identifica que la diferencia crucial está en la antigüedad del personal de plancha, compara ambos valores y vincula esa información con los tiempos de preparado más altos en la sucursal Norte. Es una respuesta completa, clara y bien fundamentada."
+            }
+          }
+        }
+      }
+    },
+    "solution": {
+      "max_points": 4,
+      "prompt": "Las propuestas del participante pueden incluir una o varias acciones para solucionar el problema. Cada acción debe evaluarse de manera individual según los criterios B1, B2 y B3, sin elegir una 'mejor' acción dentro de la grilla. El objetivo de esta sección es definir cómo puntuar cada acción concreta en función de si aborda la causa del problema, cuán específica es y cuán realista resulta.",
+      "problem_to_solve": "La sucursal Norte tarda más que la sucursal Sur en entregar los pedidos porque sus empleados en plancha presentan una menor antigüedad y, por lo tanto, tienen menos experiencia",
+      "criteria": {
+        "B1": {
+          "description": "Para cada acción propuesta, ¿la solución propuesta lidia directamente con la causa del problema?",
+          "note": "Para recibir 1 punto en este criterio, el participante debe proponer una solución que aborde explícitamente la causa del problema identificada en A3 (la menor antigüedad y falta de experiencia del personal de plancha en la sucursal Norte). Si en A3 reconoció claramente esa causa y en B1 presenta una propuesta coherente con ella, aunque no la mencione de forma explícita, puede recibir 1 punto. Si no identificó la falta de experiencia en A3 ni en B1, o propone medidas genéricas sin relación con ese diagnóstico (por ejemplo, reorganizar turnos, mejorar la plataforma o aumentar el personal sin aludir a capacitación o aprendizaje), debe recibir 0 puntos.",
+          "note2": "No debe asignarse puntaje en este criterio si el participante solo identifica correctamente la causa del problema en A3 (que los empleados en plancha de la sucursal Norte tienen menos antigüedad), pero no propone una solución explícita para resolverlo en B1. Reconocer la causa no equivale a ofrecer una medida correctiva. La propuesta debe indicar de manera clara qué acción concreta se tomaría para abordar esa falta de experiencia o mejorar el desempeño del personal. No se debe otorgar puntaje en B1 por diagnóstico correcto en A3, ni por alusiones generales a la causa del problema en B1.",
+          "scores": {
+            "0": {
+              "label": "No",
+              "example": "Deberíamos reducir la cantidad de empleados en ensamblado de la sucursal Norte, ya que el exceso de éstos está entorpeciendo la producción.",
+              "explanation": "La propuesta no aborda la causa del problema: no menciona la falta de experiencia del personal de plancha ni propone una acción relacionada con su desempeño. En cambio, introduce un nuevo diagnóstico no respaldado por el informe (un supuesto “exceso” de personal en ensamblado). Por lo tanto, no lidia directamente con la causa real del problema."
+            },
+            "1": {
+              "label": "Sí",
+              "example": "Deberíamos capacitar a los empleados de la sucursal Norte para compensar su falta de experiencia.",
+              "explanation": "La solución propuesta aborda explícitamente la causa del problema: la falta de experiencia del personal de plancha."
+            }
+          }
+        },
+        "B2": {
+          "description": "Para cada acción propuesta, ¿es una acción concreta/específica?",
+          "note": "Este criterio evalúa el grado de concreción y detalle de la propuesta. Es decir, cuán claramente se entiende qué acción se propone. Para obtener 2 puntos, la propuesta debe describir una acción definida, aplicable al contexto del local, y dejar claro qué se haría y con qué objetivo. Si se mencionan varias opciones sin desarrollo, si las acciones son vagas (por ejemplo, 'capacitar', 'hablar con el equipo', 'mejorar la organización'), corresponde 1 punto o menos.",
+          "scores": {
+            "0": {
+              "label": "Propuesta demasiado general o abstracta: no se entiende bien qué acción concreta se propone.",
+              "example": "Hablar con los empleados en plancha para ver qué está pasando.",
+              "explanation": "La propuesta es demasiado vaga: no especifica qué se haría, cómo se abordaría el problema ni qué tipo de acción concreta se implementaría. No describe un plan operativo y no permite inferir una solución aplicable dentro del local."
+            },
+            "1": {
+              "label": "Propuesta con cierta especificidad, pero sin suficiente detalle operativo o contextual.",
+              "example": "Capacitar a los empleados en plancha de la sucursal Norte. Se mencionan acciones posibles pero sin explicar cómo se implementarían.",
+              "explanation": "La propuesta avanza hacia la solución correcta —capacitarlos— pero sigue siendo general y sin detalles. No aclara qué tipo de capacitación, quién la dará, ni de qué forma ayudaría a reducir los tiempos de preparación. La especificidad es insuficiente para alcanzar el puntaje máximo."
+            },
+            "2": {
+              "label": "Propuesta clara y específica dentro del contexto de la empresa: se entiende qué acción se propone y cómo podría implementarse en términos generales. No es necesario que la propuesta incluya plazos, métricas o formatos de implementación, pero sí debe describir de forma directa una medida concreta.",
+              "example": "Organizar una capacitación práctica en la sucursal Norte, guiada por el encargado de plancha de la sucursal Sur, para que los nuevos empleados aprendan los procedimientos y reduzcan los tiempos de preparación.",
+              "explanation": "La propuesta es clara y específica: indica qué se hará (capacitación práctica), quién la llevará a cabo (el encargado de plancha de Sur) y con qué objetivo (reducir los tiempos de preparación). Es realista, aplicable y suficientemente detallada para entender la acción sin ambigüedades."
+            }
+          }
+        },
+        "B3": {
+          "description": "Para cada acción propuesta, ¿es una acción realista?",
+          "note": "Debe considerarse realista una propuesta en la que el participante sugiera reemplazar a empleados con poca experiencia por otros más experimentados, siempre que esto implique un recambio de personal y no una duplicación de puestos. En cambio, no debe considerarse realista una solución que consista simplemente en contratar empleados experimentados adicionales. En síntesis: 'despedir y reemplazar' puede ser realista, pero 'sumar más empleados' no.",
+          "scores": {
+            "0": {
+              "label": "No",
+              "example1": "Podríamos trasladar temporalmente a todos los empleados de plancha más experimentados de la sucursal Sur a la sucursal Norte.",
+              "explanation1": "No es realista porque implicaría desarmar completamente la operación de plancha de la sucursal Sur, dejando a esa sede sin personal clave. Genera un problema mayor en la otra sucursal y no es una medida operativamente viable.",
+              "example2": "Podríamos contratar más empleados experimentados",
+              "explanation2": "No es realista según los criterios del ejercicio: esta propuesta implica sumar personal adicional, lo cual no resuelve el problema de experiencia del equipo actual y contradice la regla explícita del criterio (no se considera realista contratar más empleados experimentados adicionales). La solución no aborda el problema estructural del equipo de plancha existente."
+            },
+            "1": {
+              "label": "Sí",
+              "example": "Podríamos trasladar temporalmente a un empleado de plancha de la sucursal Sur a la sucursal Norte para que capacite a los empleados de plancha de la sucursal Norte.",
+              "explanation": "Es una propuesta realista porque plantea una medida factible: trasladar temporalmente a un solo empleado experimentado sin afectar de manera crítica la operación de la sucursal Sur. No implica duplicar personal, y está alineada con la necesidad de mejorar la experiencia del equipo de plancha de Norte."
+            }
+          }
+        }
+      }
+    },
+    "total_max_points": 10
+  },
+  "writing": {
+    "total_max_points": 10,
+    "criteria": {
+      "1": {
+        "name": "Ortografía y gramática",
+        "description": "Se evalúa la corrección ortográfica y gramatical del texto, incluyendo el uso adecuado de tildes, signos de puntuación, concordancia verbal y nominal, y mayúsculas. Se valora especialmente la redacción clara, fluida y cuidada, con frases bien estructuradas y sin errores que afecten la calidad o el tono profesional del mensaje.",
+        "note": "No se considera error el uso de solo signos de cierre (¿? / ¡!)",
+        "scores": {
+          "0": {
+            "label": "Errores graves o numerosos: el texto presenta múltiples errores ortográficos o gramaticales (tildes, concordancia, puntuación o mayúsculas) que se repiten a lo largo del texto. Estos errores afectan la claridad o dan una impresión de descuido, incluso si el texto se entiende en general.",
+            "example1": "hola Ramiro, revice los informes que me enviaste. No hay problema con la plataforma de envios y la Sucursal Norte tampoco tiene mas pedidos que la Sur. Identifique que los empleados de pplancha son nuevos y demoran mucho. Una figura presente como supervisor puede mejorar la efectivdad del local, sin duda esto hara que se eleven las vtas, saludos.",
+            "explanation1": "Presenta múltiples errores graves de ortografía (revice, envios, mas, Identifique, pplancha, efectivdad, hara, vtas), problemas de mayúsculas y fallas de concordancia. Los errores son frecuentes y afectan al tono profesional del texto.",
+            "example2": "buenos dias ramiro te escrivo por que estube revisando los informes y me pareseria que el problema esta en la falta de compromiso de los empleados de la sucursal norte ya que no estan cumpliendo con los tiempos de entrega como deberian por eso pienso que lo mejor seria aser una reunion para ablar con ellos y ver si se puede mejorar el rendiminto general.",
+            "explanation2": "Incluye numerosos errores ortográficos sistemáticos (dias, escrivo, estube, pareseria, estan, deberian, aser, ablar, rendiminto), además de falta de mayúsculas, ausencia de puntuación y oraciones excesivamente largas. Estos errores dificultan la lectura y evidencian descuido."
+          },
+          "1": {
+            "label": "Algunos errores o descuidos menores, pero perceptibles: se observan varios errores dispersos (tildes omitidas, puntuación inadecuada, uso impreciso de conectores o ligeras fallas de concordancia). No impiden la comprensión, pero restan fluidez o profesionalismo al texto.",
+            "example1": "buen día luis,\nsegún los datos que revisé, las ventas de la sede norte bajaron un poco en julio pero se mantuvieron estables el resto del año. puede ser que los empleados eligieran comer afuera esos días o que el menú no fuera tan variado. sería bueno revisar eso para los próximos meses.\nsaludos",
+            "explanation1": "Contiene varios errores menores: falta de mayúsculas en nombres propios y al inicio de oraciones, y puntuación mejorable. Aunque es comprensible, la redacción pierde prolijidad y no alcanza un registro profesional impecable.",
+            "example2": "los empleados de la sucursal norte tienen poca experiencia en plancha y eso genera demoras. tambien podria ser que no esten bien organizados, porque hay varios con experiencia pero no aprovechan el tiempo. no parece haber un encargado que los controle ni que marque el ritmo de trabajo.",
+            "explanation2": "El texto omite tildes (tambien, esten), no usa mayúsculas al inicio de frases y presenta alguna repetición conceptual. Los errores no impiden la comprensión, pero reducen la fluidez y el nivel profesional del mensaje."
+          },
+          "2": {
+            "label": "Redacción impecable o casi impecable: el texto está cuidadosamente escrito, sin errores ortográficos ni gramaticales perceptibles. La puntuación es precisa, las oraciones están bien estructuradas y el registro es fluido y natural. A lo sumo puede haber un error aislado que no afecta en absoluto la calidad del texto.",
+            "example1": "Buen día Ramiro, ¿cómo estás?\nMirando los datos, me di cuenta de que los tiempos de entrega son parecidos en ambas sucursales, pero en la Norte la preparación demora más. Es probable que eso se deba a la menor experiencia del personal en plancha y ensamblado.\nSería útil reforzar la capacitación y, si se puede, enviar apoyo temporal desde la Sur para equilibrar los tiempos.\nSaludos,",
+            "explanation1": "No presenta errores ortográficos ni gramaticales. Las oraciones están bien puntuadas, la redacción es fluida y el registro es profesional. Es un ejemplo de escritura clara y cuidada.",
+            "example2": "¿Qué tal Ramiro?\nCon respecto al problema que mencionás, los empleados en plancha trabajan hace muy poco tiempo en el local, pero con un poco de entrenamiento estarán a la par de los empleados del local Sur. Habría que conversar con ellos para alentarlos a mejorar en ese aspecto y así lograr mejores calificaciones.\nEspero que mi aporte sea útil.\nSaludos cordiales!",
+            "explanation2": "El texto está correctamente escrito, con buena estructura, sin errores evidentes y con un tono adecuado. La puntuación es clara y el mensaje fluye de manera natural. Puede haber ligeras variaciones estilísticas, pero no afectan la calidad general."
+          }
+        }
+      },
+      "2": {
+        "name": "Claridad y legibilidad",
+        "description": "Se evalúa la claridad, precisión y fluidez del texto, **dentro del contexto del mail del jefe y de la consigna**. Las ideas deben expresarse de manera directa, ordenada y sin ambigüedades, y deben permitir que el jefe comprenda la respuesta a partir de la información del informe. Se valoran las oraciones bien construidas, la coherencia entre frases y la ausencia de repeticiones o redundancias. El texto se entiende fácilmente y transmite las ideas con naturalidad y economía de palabras.  Un texto es poco claro no solo cuando está mal escrito, sino también cuando, aunque sea breve o gramaticalmente correcto, **no desarrolla las ideas necesarias para responder lo que pide el jefe**, o resulta tan general que el jefe no entendería el mensaje.",
+        "note": "La repetición de ideas **debe penalizarse**. Los textos que no desarrollan las ideas mínimamente necesarias para que el jefe entienda la respuesta **en el contexto de su mail** también deben penalizarse. Un texto puede estar bien escrito a nivel lingüístico pero ser confuso o inútil si no permite comprender la respuesta requerida.",
+        "scores": {
+          "0": {
+            "label": "Texto confuso o desorganizado: el texto resulta difícil de comprender por errores de construcción o frases inconexas. Presenta repeticiones de ideas innecesarias o ambigüedades que impiden seguir el hilo argumental con claridad.",
+            "example1": "Hola Ramiro lo que pasó fue que las ventas bajaron porque no se vendió tanto como antes y también porque se tardó en entregar los pedidos y los clientes se quejaron por eso y después ya no quisieron comprar más y capaz también porque no había stock pero no estoy seguro igual creo que eso influyó bastante.",
+            "explanation1": "El texto es confuso, con una oración extremadamente larga, ideas mezcladas sin orden y afirmaciones poco precisas. Hay repeticiones (“ventas bajaron”, “no quisieron comprar más”) y contradicciones con el informe (no hay problemas de stock). La falta de estructura dificulta seguir el mensaje.",
+            "example2": "Hola Ramiro, estuve revisando lo de la sucursal norte y me parece que el problema principal está en los tiempos de preparación, porque si los pedidos tardan más en salir, los clientes se cansan de esperar y eso termina afectando las ventas.\nAdemás, creo que el problema puede venir por los tiempos, ya que cuando los pedidos se demoran los clientes no quieren esperar tanto, y al final eso hace que bajen las ventas porque los pedidos no salen a tiempo.",
+            "explanation2": "Hay repetición explícita de ideas (“problema en los tiempos”, “cuando se demoran los clientes se cansan”, “bajan las ventas porque no salen a tiempo”), lo que genera redundancia. La frase es circular y no aporta información nueva. Esto afecta la claridad y rompe la fluidez de lectura.",
+            "example3": "Tienen menos antigüedad. Saludos,",
+            "explanation3": "Aunque está escrito de manera clara y sin errores, **no dice nada útil para el jefe**: no desarrolla la idea, no usa datos del informe y no responde ninguna de las preguntas. Por tanto, debe recibir 0 puntos."          
+          },
+          "1": {
+            "label": "Claridad limitada: se identifican varias frases confusas, mal estructuradas o redundantes. La lectura requiere esfuerzo y el mensaje no fluye naturalmente. Las ideas aparecen sin una secuencia lógica o con expresiones poco precisas.",
+            "example1": "Estimado, revisando los datos que me enviaste noto que la sucursal norte presenta demoras importantes en el armado de los pedidos, esto puede deberse a una falta de organización en la cocina ya que si bien hay más personal que en la sur los tiempos son mayores, lo cual no debería pasar, de todas maneras voy a hablar con los encargados para ver si hay algún inconveniente en el proceso o si es un tema de coordinación entre los empleados.",
+            "explanation1": "El texto tiene oraciones demasiado largas, mezcla diagnóstico con hipótesis sin orden, y presenta saltos argumentales. La estructura interna es confusa y la lectura exige esfuerzo. Aunque se entiende la idea central, la redacción es poco clara.",
+            "example2": "Según lo que pude observar, el inconveniente parece estar en la sucursal norte porque los pedidos se demoran más que en la sur, y eso hace que los clientes esperen demasiado y dejen de comprar, también puede ser que los empleados estén algo desmotivados o cansados por la cantidad de trabajo, ya que hace varios meses que no se hacen cambios en los turnos ni mejoras en las condiciones, lo cual podría estar afectando el rendimiento general y provocando que los tiempos sean más largos de lo habitual.",
+            "explanation2": "Presenta oraciones extensas y contiene ideas agregadas sin una secuencia clara. Hay afirmaciones imprecisas y no apoyadas en el informe (“desmotivados”, “condiciones laborales”). La falta de foco afecta la claridad general.",
+            "example3": "Hola Ramiro, parece ser un problema en los tiempos de preparación, pero me tendría que fijar bien. Saludos,",
+            "explanation3": "Responde algo, pero de forma superficial y sin desarrollar. No quedaría claro para el jefe cuál es el diagnóstico o cuáles son las posibles soluciones."
+          },
+          "2": {
+            "label": "Claridad aceptable pero mejorable: el texto se comprende en general, aunque contiene algunas oraciones extensas, o formulaciones poco naturales que interrumpen la fluidez. Puede haber alguna repetición de ideas. Requiere algo de esfuerzo para seguir el hilo.",
+            "example1": "Estimado, luego de revisar los indicadores, observo que la sucursal Norte presenta demoras en el tiempo de preparación, posiblemente vinculadas a una menor coordinación entre los sectores, sería conveniente evaluar una redistribución de tareas o realizar rotaciones internas para equilibrar la carga laboral entre plancha y ensamblado. También podríamos implementar un esquema de incentivos para reforzar la productividad, aunque antes sería necesario analizar si las demoras se deben a la falta de experiencia o a cuestiones de organización interna.\nEn general, el problema no parece provenir de la plataforma de envíos, sino del funcionamiento operativo dentro del local, lo cual podría resolverse con ajustes menores en la asignación de personal y una comunicación más fluida entre los equipos.",
+            "explanation1": "El texto es comprensible, pero tiene oraciones largas y transiciones poco naturales. Hay cierta repetición (redistribución de tareas / organización interna) y mezcla de propuestas con diagnóstico. La claridad es buena, pero no sobresaliente.",
+            "example2": "Buenos días, Ramiro:\nRevisando los datos del último informe noto que la sucursal norte tiene un tiempo promedio de preparación considerablemente mayor que la sur, y aunque la diferencia no parece muy grande cuando se observa día por día, al analizar la tendencia semanal se evidencia un aumento constante que podría estar generando demoras acumuladas en la entrega y afectando la satisfacción de los clientes, sobre todo en los horarios pico donde el volumen de pedidos es más alto.\nCreo que sería útil evaluar si este retraso está relacionado con la falta de experiencia del personal o con una mala distribución de tareas dentro del local, y en función de eso definir si conviene capacitar al equipo actual o sumar refuerzos en los turnos de mayor demanda.\nSaludos",
+            "explanation2": "La redacción es clara, pero hay oraciones demasiado largas y densas que dificultan la lectura. La idea principal se entiende, pero requiere más esfuerzo del necesario, por lo que no alcanza el nivel máximo de fluidez."
+          },
+          "3": {
+            "label": "Claridad y legibilidad destacadas: el texto es muy claro y fluido. Las oraciones están bien construidas, no hay ambigüedades, o repetición de ideas. Se lee con naturalidad.",
+            "example1": "Buenas tardes, Ramiro:\nQuería disculparme por los inconvenientes en los tiempos de entrega registrados durante los últimos días. Luego de revisar el proceso, detectamos que el retraso proviene de la adaptación del nuevo empleado en el área de ensamblado. Estamos acompañando su capacitación para que alcance el ritmo del resto del equipo y confiamos en que los tiempos se normalicen en breve.\nSaludos cordiales",
+            "explanation1": "La redacción es clara, directa y sin repeticiones. Las ideas están bien ordenadas y cada frase aporta información nueva. El texto fluye de manera natural y es fácil de leer.",
+            "example2": "Ramiro:\nEl tiempo promedio de preparación en la sucursal Norte es de 29 minutos, frente a 18 en la Sur. Esa diferencia de 11 minutos explica las demoras percibidas por los clientes, ya que el tiempo de entrega es prácticamente igual en ambas.\nEl problema parece estar en la organización interna del local, no en la plataforma de envíos. Sugiero capacitar al personal de plancha y revisar la distribución de tareas para equilibrar los tiempos entre sucursales.\nSaludos,",
+            "explanation2": "El texto es muy claro y ordenado: explica el problema con precisión, evita redundancias y presenta las ideas de forma secuencial y fluida. No hay ambigüedades ni repeticiones. La lectura es natural y profesional."
+          }
+        }
+      },
+      "3": {
+        "name": "Organización del texto",
+        "description": "Se evalúa la estructura y el orden interno del texto. Debe seguir una secuencia lógica que incluya:\n1. una introducción que enmarque el mensaje o un saludo (por ejemplo, 'Hola XX, cómo estás?' o una breve referencia al mail del jefe),\nEjemplo de referencia al mail del jefe: “Revisé los datos que me enviaste y encontré lo siguiente:”\n2. un desarrollo en el que se respondan las preguntas planteadas,\n3. una sección con propuestas o sugerencias para resolver el problema, y\n4. un cierre que retome las ideas principales o una despedida.\nEjemplos de cierre o saludo:\n1.“Estoy a disposición para discutir cómo implementar las mejoras.”\n2.'Saludos,'\nTambién se valora la organización interna dentro de cada sección: el uso adecuado de párrafos, la coherencia en la secuencia de ideas y la ausencia de saltos temáticos.",
+        "note": "Tanto un saludo como una referencia al mail del jefe cuentan como introducción, y tanto una despedida como un cierre que retome la ideas principales o que diga 'Quedo a disposición' cuentan como cierre.",
+        "scores": {
+          "0": {
+            "label": "Texto desorganizado o sin estructura reconocible: no se distinguen las secciones principales o las ideas aparecen mezcladas y repetidas. Falta orden tanto en la estructura general como dentro de los párrafos.",
+            "example": "estuve viendo los datos y me parece que algo anda mal con los tiempos, porque hay empleados que trabajan más y otros menos, aunque eso también depende de si viven cerca o si tienen más experiencia, igual habría que ver si no es por los turnos o por cómo se reparten las tareas, porque capaz no todos hacen lo mismo, y si encima hay menos personal los días de más pedidos, eso también influye, por eso no sé si conviene cambiar los horarios o revisar las planillas.",
+            "explanation": "No hay estructura reconocible. El texto mezcla diagnósticos, hipótesis, suposiciones y soluciones en una sola oración larguísima. No existe introducción, desarrollo ni cierre; tampoco se distinguen párrafos. Las ideas aparecen desordenadas y repetidas, lo que impide seguir un hilo lógico."
+          },
+          "1": {
+            "label": "Estructura débil o confusa: se percibe cierta intención de organización, pero faltan secciones o están mal delimitadas. Dentro de cada parte hay mezcla de ideas o saltos que dificultan la lectura. Los párrafos no agrupan bien las ideas.",
+            "example": "Hola, estuve mirando los datos y vi que la sucursal Sur entrega más rápido que la Norte, puede ser por cómo se organizan los turnos o por la cantidad de personal, habría que revisar eso porque quizás no se están distribuyendo bien las tareas.",
+            "explanation": "El texto muestra una intención mínima de organización (introducción + diagnóstico parcial), pero está incompleto: no tiene propuestas claras ni cierre. Además, dentro del único párrafo hay saltos temáticos y mezcla de causas sin orden, lo que dificulta la lectura."
+          },
+          "2": {
+            "label": "Organización parcial o irregular: el texto incluye la mayoría de las secciones, pero el orden o la articulación entre ellas es poco clara. Algunas partes están bien organizadas, mientras que otras presentan saltos. Los párrafos son comprensibles pero desbalanceados.",
+            "example": "Ramiro, buenas tardes.\nTe comento lo que encontré en la información que me enviaste.\nPor lo que veo los retrasos se concentran sobre todo en el turno tarde. Recomiendo:\nReasignar parte del personal del turno mañana para equilibrar la carga. Revisar si la demora se debe a un cuello de botella en empaquetado.\nImplementar un control diario de tiempos hasta normalizar la operación.\nSaludos,",
+            "explanation": "Incluye introducción y propuestas, pero el orden interno es irregular. Las ideas aparecen parcialmente organizadas, pero hay saltos entre diagnóstico y propuestas dentro del mismo bloque. La estructura está presente, pero es débil o incompleta."
+          },
+          "3": {
+            "label": "Organización clara y coherente: el texto sigue la secuencia esperada (introducción, respuestas, propuestas, cierre) y las ideas dentro de cada sección están bien agrupadas. Hay un uso adecuado de párrafos, aunque las transiciones o la progresión de ideas podrían ser más fluidas.",
+            "example": "Estimado Ramiro,\nRevisé los reportes de la última semana y detecté que la mayor parte de las demoras proviene del tiempo de preparación en el local. En la sucursal Norte, el promedio es de 28 minutos, frente a 17 en la Sur.\nEl tiempo de entrega por parte de los repartidores es similar entre ambas sucursales, por lo que el problema no parece estar en la plataforma de envíos. Tampoco se observa una diferencia importante en el volumen de pedidos.\nUna posible explicación es la falta de experiencia del personal de plancha, ya que varios empleados se incorporaron recientemente. Esto podría estar generando un cuello de botella en la etapa de preparación.\nSería conveniente reforzar la capacitación y acompañar a los nuevos empleados hasta que se estabilice el rendimiento.\nSaludos,",
+            "explanation": "El texto sigue la estructura general esperada: presenta un saludo inicial, desarrolla un diagnóstico ordenado (comparando tiempos de preparación, entrega y volumen de pedidos), propone una medida concreta y cierra de manera adecuada. Las ideas están agrupadas por tema y el hilo lógico se comprende sin dificultad. Sin embargo, dentro del segundo bloque aparece cierta mezcla de contenidos —se habla en un mismo párrafo de plataforma, pedidos y antigüedad del personal— lo que podría separarse en dos párrafos para mejorar la claridad. Aun así, la organización global es coherente y cumple con la secuencia introducción → diagnóstico → propuesta → cierre."
+          },
+          "4": {
+            "label": "Organización excelente: el texto presenta una estructura completa y equilibrada: cada sección cumple su función, las ideas dentro de cada una están ordenadas, y las transiciones entre párrafos son naturales. La organización general y la interna contribuyen a una lectura fluida y lógica.",
+            "example": "Estimados,\nEstuve revisando los datos que me enviaron sobre las recientes demoras en la sucursal Norte y preparé un breve análisis con las principales conclusiones y propuestas de mejora.\nLas demoras registradas se explican principalmente por el tiempo de preparación en el local, que promedia 28 minutos frente a 17 en la sucursal Sur. El tiempo de entrega por parte de los repartidores es muy similar entre ambas sucursales, por lo que el problema no parece estar en la plataforma de envíos. Tampoco se detectan diferencias relevantes en el volumen de pedidos.\nLa causa más probable está en la menor experiencia del personal de plancha: varios empleados se incorporaron recientemente, lo que podría estar afectando la eficiencia y generando un cuello de botella en la preparación.\nRecomiendo implementar un plan de capacitación y acompañamiento para el nuevo personal, así como un monitoreo semanal de los tiempos de preparación para verificar las mejoras. Con estas medidas, deberíamos poder reducir las demoras y recuperar los niveles de servicio habituales.\nQuedo a disposición para coordinar los próximos pasos o ampliar el análisis si lo consideran necesario.\nSaludos cordiales,",
+            "explanation": "Presenta una estructura completa y equilibrada: introducción contextualizada, análisis ordenado y secuencial, propuestas claras y un cierre formal. Cada párrafo cumple una función clara y las ideas están agrupadas temáticamente. Las transiciones son naturales y la lectura es fluida. Es un ejemplo de organización impecable."
+          }
+        }
+      },
+      "4": {
+        "name": "Registro adecuado",
+        "description": "Se evalúa si el tono del mail es apropiado para el contexto laboral y coherente con el tono del mail del jefe. El tono no debe ser excesivamente informal, debe ser cortes y profesional.\nEl criterio penaliza automáticamente (0 puntos) los casos en los que:\n1.El texto esté completamente escrito en mayúsculas (por considerarse una forma inapropiada o agresiva de comunicación).\n2. El texto incluya rastros evidentes de generación automática o placeholders propios de un asistente virtual, como firmas incompletas del tipo “[tu nombre]”, o texto no reemplazado.",
+        "note1": "En este criterio no se evalúa la presencia o la falta de saludo y despedida",
+        "note2": "Mencionar explícitamente que se utilizó una herramienta de IA para elaborar el diagnóstico **no se penaliza**",
+        "scores": {
+          "0": {
+            "label": "El tono del mail es demasiado informal, coloquial o poco cortés en relación con el tono del mail del jefe. También se asigna 0 puntos si el texto está completamente en mayúsculas, si deja evidencia explícita de interacción con ChatGPT u otra IA, o si el texto no presenta un tono profesional acorde al mail del jefe.",
+            "example1": "Buenas,\nEstuve mirando los datos y vi que la sucursal Sur entrega más rápido que la Norte, puede ser por cómo se organizan los turnos o por la cantidad de personal, habría que revisar eso porque quizás no se están distribuyendo bien las tareas.\nAbrazo,",
+            "explanation1": "El tono es excesivamente informal para un intercambio laboral: usa saludos coloquiales (“Buenas”, “Abrazo”). No mantiene la formalidad esperable en el contexto definido por el mail del jefe.",
+            "example2": "Hola Ramiro, ¿cómo estás?\nEstuve mirando los datos y vi que la sucursal Sur entrega más rápido que la Norte, puede ser por cómo se organizan los turnos o por la cantidad de personal, habría que revisar eso porque quizás no se están distribuyendo bien las tareas.\nSaludos cordiales,\n[Tu nombre]",
+            "explanation2": "Incluye un placeholder típico de un asistente virtual ('[tu nombre]'), lo cual activa la penalización automática.",
+            "example3": "HOLA RAMIRO, ¿CÓMO ESTÁS?\nESTUVE MIRANDO LOS DATOS Y VI QUE LA SUCURSAL SUR ENTREGA MÁS RÁPIDO QUE LA NORTE, PUEDE SER POR CÓMO SE ORGANIZAN LOS TURNOS O POR LA CANTIDAD DE PERSONAL, HABRÍA QUE REVISAR ESO PORQUE QUIZÁS NO SE ESTÁN DISTRIBUYENDO BIEN LAS TAREAS.\nSALUDOS CORDIALES,",
+            "explanation3": "El texto está completamente en mayúsculas, lo cual se considera un tono inadecuado o agresivo en comunicación escrita. Esto activa automáticamente el puntaje 0, independientemente del contenido."          
+          },
+          "1": {
+            "label": "Registro adecuado: el tono es respetuoso y coherente acorde con el tono del mail del jefe. El texto mantiene un registro profesional y apropiado para el contexto laboral.",
+            "example": "Hola Ramiro, ¿cómo estás?\nEstuve mirando los datos y vi que la sucursal Sur entrega más rápido que la Norte, puede ser por cómo se organizan los turnos o por la cantidad de personal, habría que revisar eso porque quizás no se están distribuyendo bien las tareas.\nSaludos cordiales,",
+            "explanation": "El tono es respetuoso, profesional y consistente con el mail del jefe. Aunque el estilo es sencillo e informal en algunos lugares, se mantiene dentro de un registro cortés y adecuado para el contexto laboral, sin señales de IA ni marcas impropias."
+          }
+        }
+      }
+    }
+  }
+}

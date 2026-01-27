@@ -1,0 +1,281 @@
+{ 
+  "task_context": {
+    "description": "Trabajás en la gestión de “Sabores Express”, un emprendimiento contratado para manejar el comedor en las sedes Norte y Sur de Infotech, una importante empresa. Ayer recibiste el siguiente correo electrónico de tu jefa:",
+    "email_from_boss": "De: Adriana González <agonzalez@gmail.com>\nAsunto: problema con ventas en la sede Norte\nHola, ¿cómo estás?\nTe escribo porque estuve mirando las ventas de las últimas semanas y no logro entender qué está pasando en nuestro comedor de la sede Norte. A pesar de que Infotech tiene casi el mismo número de empleados en ambas sedes, vendemos menos almuerzos en la sede Norte que en la Sur. ¿Me ayudás a entender lo que está pasando?\nAdjunto un informe que preparó mi equipo para ayudarnos a entender mejor la situación. A partir de los datos de este informe, me gustaría que me compartas tu mirada sobre los siguientes puntos:\nLos clientes de la sede Norte, ¿están eligiendo en mayor medida otras alternativas de almuerzo fuera del comedor?\n¿Las ventas en la sede Norte bajaron en general o solo en un momento específico?\n¿Algo más del informe te parece relevante para entender lo que está pasando?\nPor favor fundamentá bien tus respuestas, ya que planeo compartir este diagnóstico con otros miembros del equipo.\nPor último, según tu análisis, ¿qué sugerirías que hagamos para solucionar este problema?\nSaludos,\nAdriana",
+    "informe_adjunto":{
+      "resumen": "Resumen del problema: A pesar de que Infotech tiene casi el mismo número de empleados en ambas sedes, se venden menos almuerzos en la sede Norte que en la Sur.",
+      "grafico": "1) Número diario de almuerzos vendidos en el comedor de cada sede durante las últimas tres semanas:\nhttps://i.imgur.com/ptacA4I.png",
+      "tabla1": "2) Durante la semana pasada se realizó una encuesta a los empleados de Infotech presentes en la oficina. Se les preguntó de dónde obtuvieron su almuerzo ese día. Los resultados son los siguientes:\n\\n\\n\\begin{tabular}{|l|*{5}{P{3cm}|}}\\n\\hline\\n\\textbf{Site} & \\textbf{Lunes} & \\textbf{Martes} & \\textbf{Miércoles} & \\textbf{Jueves} & \\textbf{Viernes} \\\\\\n\\hline\\n\\textbf{Sur} &\\n\\makecell[l]{Comedor: 80\\%\\\\Otro lugar: 20\\%} &\\n\\makecell[l]{Comedor: 76\\%\\\\Otro lugar: 24\\%} &\\n\\makecell[l]{Comedor: 75\\%\\\\Otro lugar: 25\\%} &\\n\\makecell[l]{Comedor: 80\\%\\\\Otro lugar: 20\\%} &\\n\\makecell[l]{Comedor: 78\\%\\\\Otro lugar: 22\\%} \\\\\\n\\hline\\n\\textbf{Norte} &\\n\\makecell[l]{Comedor: 78\\%\\\\Otro lugar: 22\\%} &\\n\\makecell[l]{Comedor: 75\\%\\\\Otro lugar: 25\\%} &\\n\\makecell[l]{Comedor: 80\\%\\\\Otro lugar: 20\\%} &\\n\\makecell[l]{Comedor: 79\\%\\\\Otro lugar: 21\\%} &\\n\\makecell[l]{Comedor: 78\\%\\\\Otro lugar: 22\\%} \\\\\\n\\hline\\n\\end{tabular}",
+      "tabla2": "3) Infotech cuenta con empleados en 2 áreas distintas: administración y ventas. Los empleados de administración pueden trabajar desde casa los viernes, mientras que los de ventas deben asistir presencialmente de lunes a viernes. La tabla muestra las características de los empleados de cada sede según el área de trabajo:\\n\\n\\begin{tabular}{l cccc}\\n\\toprule\\n& \\multicolumn{2}{c}{\\textbf{Sede Sur}} & \\multicolumn{2}{c}{\\textbf{Sede Norte}} \\\\\\n\\cmidrule(lr){2-3} \\cmidrule(lr){4-5}\\n\\textbf{Área de trabajo} & \\textbf{\\makecell{Número de \\\\ Empleados}} & \\textbf{\\makecell{Antigüedad promedio \\\\ (en años)}} & \\textbf{\\makecell{Número de \\\\ Empleados}} & \\textbf{\\makecell{Antigüedad promedio \\\\ (en años)}} \\\\\\n\\midrule\\nAdministración & 20 & 2.0 & 81 & 3.0 \\\\\\nVentas & 105 & 3.0 & 44 & 2.0 \\\\\\n\\midrule\\n\\textbf{Total} & \\textbf{125} & \\textbf{2.8} & \\textbf{125} & \\textbf{2.6} \\\\\\n\\bottomrule\\n\\end{tabular}"},
+    "consigna": "Escribí a continuación un correo con la respuesta a Adriana:\nPara: Adriana González\nAsunto: Re: problema con ventas en la sede Norte"
+  },
+  "content": {
+    "diagnosis": {
+      "max_points": 6,
+      "questions": {
+        "A1": {
+          "prompt": "Los clientes de la sede Norte, ¿están eligiendo en mayor medida otras alternativas de almuerzo fuera del comedor?",
+          "correct_answer": "No. Se puede ver en la tabla del informe que el % de empleados de Infotech que eligen el comedor (vs. otro lugar) es similar en la Sede Norte que en la sede Sur. Las ventas no están cayendo porque los clientes estén eligiendo en mayor medida otras alternativas fuera del comedor.",
+          "note": "Para recibir puntaje en este punto **debe mencionar** explícitamente que las proporciones de empleados que almuerzan en el comedor (versus otro lugar) son similares entre las dos sedes. Frases genéricas como 'no hay diferencias entre sucursales' o 'los resultados son parecidos' deben calificarse con 0 puntos, ya que no especifican a qué tipo de diferencia se refieren. La respuesta debe aludir claramente a la comparación de proporciones entre sedes, y si además menciona que esta similitud se mantiene a lo largo de la semana, mejor. No hace falta que se proporcionen ejemplos numéricos para obtener 2 puntos en este criterio, pero sí debe hacerse referencia explícita a los datos proporcionados.",
+          "scores": {
+            "0": {
+              "label": "No responde correctamente",
+              "example": "Sí, en la sede Norte hay un mayor porcentaje de empleados que decide no almorzar en el comedor.",
+              "explanation": "La afirmación es incorrecta según los datos del informe: no hay un mayor porcentaje de empleados de la sede Norte eligiendo alternativas externas. Además, la respuesta no menciona la comparación de proporciones entre sedes, requisito indispensable para recibir puntaje en este criterio."
+            },
+            "1": {
+              "label": "Menciona la respuesta correcta, pero de manera superficial",
+              "example": "No, en la sede Norte no parecen estar eligiendo otras alternativas con más frecuencia.",
+              "explanation": "La respuesta va en la dirección correcta, pero es demasiado general: no menciona las proporciones de empleados que almuerzan en el comedor en cada sede, ni hace referencia explícita a los datos de la tabla. No cumple con el requisito central del criterio, aunque tampoco afirma algo incorrecto, por lo que merece 1 punto."
+            },
+            "2": {
+              "label": "Menciona la respuesta correcta de manera detallada, y justifica adecuadamente",
+              "example": "No, como se muestra en la tabla provista en el informe, el porcentaje de empleados que elige el comedor en la sede Norte es muy similar al porcentaje de empleados que elige el comedor en la sede Sur.",
+              "explanation": "La respuesta hace referencia explícita a la comparación de proporciones entre sedes —el requisito clave del criterio— y además menciona que esta información surge de los datos de la tabla del informe. No aporta números, pero no es necesario para obtener el puntaje máximo. La justificación es clara y adecuada."
+            }
+          }
+        },
+        "A2": {
+          "prompt": "¿Las ventas en la sede Norte bajaron en general o solo en un momento específico?",
+          "correct_answer": "Como se ve en el gráfico, las ventas en la sede Norte únicamente son menores los días viernes. No hay diferencias entre las ventas de las dos sedes en los demás días de la semana.",
+          "note": "Aludir a la causa real del problema no alcanza para recibir un punto en este inciso. Expresiones como 'constantes y parejos', 'similares', 'sin diferencias', 'igual el resto de los días' o equivalentes, deben considerarse como que el participante está diciendo que las ventas son iguales el resto de los días. No hace falta que se proporcionen ejemplos numéricos para que la respuesta esté completa (2 puntos), pero si debe hacerse referencia a los datos proporcionados.",
+          "scores": {
+            "0": {
+              "label": "No responde correctamente",
+              "example": "Las ventas en la sede Norte no mostraron una baja puntual, sino que han sido constantemente más bajas que las de la sede Sur durante las tres semanas analizadas.",
+              "explanation": "La afirmación contradice directamente los datos del gráfico: las ventas no son constantemente más bajas en la sede Norte, sino solo los días viernes. Además, la respuesta no distingue entre días ni identifica el patrón específico que exige la consigna. Por lo tanto, no responde correctamente al punto evaluado."
+            },
+            "1": {
+              "label": "Menciona la respuesta correcta, pero de manera superficial.",
+              "example": "La sede Norte vende menos los días viernes",
+              "explanation": "La respuesta identifica correctamente el día en que la sede Norte vende menos, pero es demasiado breve y no desarrolla la comparación con el resto de los días de la semana. No hace referencia explícita al patrón general del gráfico ni explica que fuera de los viernes las ventas son similares entre sedes. Por eso es correcta pero superficial."
+            },
+            "2": {
+              "label": "Menciona la respuesta correcta de manera detallada, y justifica adecuadamente",
+              "example": "En la información adjuntada puede observarse que, en todas las semanas, la sede Norte presenta menos ventas que la sede Sur los viernes. El resto de los días las ventas en ambas sedes son prácticamente iguales.",
+              "explanation": "La respuesta describe con claridad el patrón del gráfico: identifica el día específico de menor desempeño (viernes) y aclara que fuera de ese día las ventas son similares. Menciona explícitamente la comparación entre sedes y se apoya en los datos del informe, cumpliendo plenamente con los requisitos para obtener 2 puntos."
+            }
+          }
+        },
+        "A3": {
+          "prompt": "¿Algo más del informe te parece relevante para entender lo que está pasando?",
+          "correct_answer": "Sí. La sede Norte tiene una mayor proporción de empleados del área de Administración (81 sobre 125), mientras que la sede Sur tiene una mayor proporción del área de ventas (105 sobre 125). Los empleados de administración tienen permitido trabajar desde su casa los viernes, mientras que los de ventas deben asistir presencialmente de lunes a viernes. La explicación más probable para la diferencia de ventas entre sedes los días viernes es que la sede Norte tiene más empleados de administración, y estos se quedan trabajando desde su casa los viernes.",
+          "note": "No hace falta que se proporcionen ejemplos numéricos para que la respuesta esté completa (2 puntos), pero si debe hacerse referencia a los datos proporcionados.",
+          "scores": {
+            "0": {
+              "label": "No responde correctamente.",
+              "example": "Sí, las diferencias en las ventas entre ambas sedes probablemente se deban a la composición del personal. Es probable que los empleados de administración, que tienen mayor presencia en la sede Norte, perciban ingresos más bajos que los empleados de ventas, lo que podría explicar el menor nivel de ventas en esa sede.",
+              "explanation": "La respuesta menciona diferencias en la composición del personal, pero introduce una explicación inexistente en el informe (“ingresos más bajos”) que no está respaldada por los datos. Además, no identifica el mecanismo correcto: que los empleados administrativos trabajan desde su casa los viernes. Esto constituye una interpretación incorrecta del informe, por lo que la respuesta debe recibir 0 puntos."
+            },
+            "1": {
+              "label": "Menciona la respuesta correcta, pero de manera superficial.",
+              "example": "Sí, la sede Norte vende menos que la sede Sur los viernes porque tiene más empleados que trabajan desde casa ese día.",
+              "explanation": "La respuesta señala el mecanismo correcto (más empleados trabajando desde casa los viernes), pero lo hace de forma muy general y sin referencia explícita a los datos del informe. No menciona la proporción de empleados administrativos ni alude a la diferencia en la composición del personal entre sedes, por lo que queda incompleta y merece solo 1 punto."
+            },
+            "2": {
+              "label": "Menciona la respuesta correcta de manera detallada, y justifica adecuadamente.",
+              "example": "Sí, la tabla que muestra la composición de trabajadores en ambas sedes indica que la sede Norte tiene una mayor proporción de empleados administrativos. Como en ambas sedes este grupo puede trabajar desde casa los días viernes, esta diferencia en la composición podría explicar por qué las ventas de los viernes son más bajas en la sede Norte.",
+              "explanation": "La respuesta menciona de manera explícita la diferencia en la composición del personal entre sedes, se basa directamente en los datos de la tabla y describe correctamente el mecanismo: los empleados administrativos pueden trabajar desde casa los viernes, reduciendo la cantidad de clientes potenciales en la sede Norte. La explicación es clara, precisa y fundamentada en la información del informe, cumpliendo plenamente con el criterio para 2 puntos."
+            }
+          }
+        }
+      }
+    },
+    "solution": {
+      "max_points": 4,
+      "prompt": "Las propuestas del participante pueden incluir una o varias acciones para solucionar el problema. Cada acción debe evaluarse de manera individual según los criterios B1, B2 y B3, sin elegir una 'mejor' acción dentro de la grilla. El objetivo de esta sección es definir cómo puntuar cada acción concreta en función de si aborda la causa del problema, cuán específica es y cuán realista resulta.",
+      "problem_to_solve":"Las ventas son menores en la sede Norte porque cuentan con una mayor proporción de trabajadores que pueden trabajar desde su casa los viernes.",
+      "criteria": {
+        "B1": {
+          "description": "Para cada acción propuesta, ¿la solución propuesta lidia directamente con la causa del problema?",
+          "note": "Para recibir 1 punto en este criterio, el participante debe proponer una solución que aborde explícitamente la causa del problema identificada en A3 (la menor asistencia de empleados los viernes en la sede Norte). Si en A3 reconoció claramente esa causa y en B1 presenta una propuesta coherente con ella, aunque no la mencione de forma explícita, puede recibir 1 punto. Si no identificó la causa en A3 ni en B1, o propone soluciones genéricas sin relación con la asistencia (por ejemplo, mejorar la comida, la atención o la publicidad), debe recibir 0 puntos.",
+          "note2": "No debe asignarse puntaje en este criterio si el participante solo identifica correctamente la causa del problema en A3 (que la sede Norte tiene más empleados administrativos que trabajan desde casa los viernes), pero no propone una solución explícita para resolverlo en B1. Reconocer la causa no equivale a ofrecer una medida correctiva. La propuesta debe indicar de manera clara qué acción se tomaría para compensar la menor asistencia o mitigar su efecto en las ventas (por ejemplo, ofrecer promociones los viernes o ajustar la producción los viernes). No se debe otorgar puntaje en B1 por diagnóstico correcto en A3, ni por alusiones generales a la causa del problema en B1.",
+          "note3": "Toda propuesta basada en promociones, menús del día, descuentos, beneficios o 'special days' debe recibir automáticamente 0 puntos si no apunta específicamente a (a) aumentar las ventas de los viernes —el día afectado por el teletrabajo— o (b) aumentar explícitamente las ventas de lunes a jueves para compensar la caída de los viernes. Propuestas promocionales que no especifican uno de estos dos objetivos no abordan la causa del problema.",
+          "scores": {
+            "0": {
+              "label": "No",
+              "example1": "Podríamos implementar una encuesta que le pregunte a los empleados de la sede Norte qué es lo que no les gusta de la comida del comedor.",
+              "explanation1": "La propuesta no está relacionada con la causa del problema: la menor asistencia los viernes debido a que muchos empleados administrativos trabajan desde su casa. En lugar de proponer una acción para compensar o mitigar esa menor asistencia, la sugerencia se enfoca en la comida, lo cual es irrelevante para el mecanismo real. Por eso no lidia con la causa del problema y debe recibir 0 puntos.",
+              "example2": "Propongo ofrecer menús especiales y descuentos para incrementar las ventas.",
+              "explanation2": "La propuesta no aborda la causa del problema. Sugiere ofrecer menús especiales y descuentos, pero no especifica que estas acciones deban aplicarse los viernes —el día afectado por la menor asistencia— ni que busquen compensar esa caída aumentando las ventas de lunes a jueves. Al no orientar las promociones hacia el mecanismo que genera la baja en ventas (el teletrabajo de los empleados administrativos los viernes), la solución no responde al problema real y debe recibir 0 puntos."
+            },
+            "1": {
+              "label": "Sí",
+              "example1": "Podríamos ofrecer promociones los viernes en la sede Norte para incentivar a quienes suelen almorzar en otro lugar a elegir el comedor ese día. De este modo, podríamos compensar la caída en ventas que se produce cuando los empleados administrativos trabajan desde casa.",
+              "explanation1": "La propuesta se vincula de manera directa con la causa del problema: la menor asistencia en la sede Norte los viernes por el teletrabajo del personal administrativo. La solución plantea una acción concreta —promociones específicas los viernes— orientada a compensar esa baja de clientes. Aborda explícitamente el mecanismo que genera la caída en ventas.",
+              "example2": "Podríamos ofrecer promociones de lunes a jueves en la sede Norte para incentivar a quienes suelen almorzar en otro lugar a elegir el comedor durante la semana. De este modo, podríamos compensar la caída en ventas que se produce cuando los empleados administrativos trabajan desde casa los viernes.",
+              "explanation2": "La propuesta se vincula de manera directa con la causa del problema: la menor asistencia en la sede Norte los viernes por el teletrabajo del personal administrativo. La solución plantea una acción concreta —promociones específicas de lunes a jueves- orientada a compensar esa baja de clientes los viernes."
+
+            }
+          }
+        },
+        "B2": {
+          "description": "Para cada acción propuesta, ¿es una acción concreta/específica?",
+          "note": "Este criterio evalúa el grado de concreción y detalle de la propuesta. Es decir, cuán claramente se entiende qué acción se propone. Para obtener 2 puntos, la propuesta debe describir una acción definida, y dejar claro qué se haría y con qué objetivo. Si se mencionan varias opciones sin desarrollo, si las acciones son vagas (por ejemplo, 'hablar con Infotech o ver la manera de ofrecer delivery'), corresponde 1 punto o menos.",
+          "scores": {
+            "0": {
+              "label": "Propuesta demasiado general o abstracta: no se entiende bien qué acción concreta se propone.",
+              "example": "Sugiero modificar la oferta el viernes, u ofrecer alternativas para los que hacen home office",
+              "explanation": "La propuesta es vaga y no define ninguna acción concreta. “Modificar la oferta” y “ofrecer alternativas” son expresiones amplias que no permiten entender qué se haría exactamente ni cómo se implementaría. Tampoco especifica qué tipo de modificaciones se realizarían ni cómo se relacionan con el problema identificado, por lo que recibe 0 puntos."
+            },
+            "1": {
+              "label": "Propuesta con cierta especificidad, pero sin suficiente detalle operativo o contextual.",
+              "example1": "Evaluar ofrecer promociones los viernes.",
+              "explanation1": "La propuesta apunta en la dirección correcta (promociones los viernes), pero se formula de manera muy preliminar: “evaluar ofrecer” no constituye una medida concreta y no se aclara qué tipo de promoción, a quién estaría dirigida o qué se busca lograr. Tiene algo de especificidad, pero es insuficiente para comprender la acción de forma operativa, por lo que obtiene 1 punto.",
+              "example2": "Deberíamos modificar el menú los viernes y ofrecer promoeciones el día de home office.",
+              "explanation2": "La propuesta se orienta hacia el mecanismo adecuado —intervenir específicamente los viernes, día afectado por el home office— pero sigue siendo demasiado general. Decir 'modificar el menú' y 'ofrecer promociones' no aclara qué cambios concretos se harían, qué tipo de promociones se aplicarían, ni cómo estas acciones contribuirían a mitigar la caída en ventas. Aunque muestra cierta dirección correcta, carece del nivel de detalle operativo necesario para definirla como una acción concreta, por lo que corresponde asignar 1 punto."
+            },
+            "2": {
+              "label": "Propuesta clara y específica: se entiende qué acción se propone y cómo podría implementarse en términos generales. No es necesario que la propuesta incluya plazos, métricas o formatos de implementación, pero sí debe describir de forma directa una medida concreta.",
+              "example": "Ofrecer promociones en la sede Norte los días de menor asistencia para incentivar el consumo en el comedor.",
+              "explanation": "La propuesta es directa y fácilmente implementable: especifica qué se haría (ofrecer promociones), dónde (sede Norte) y con qué objetivo (incentivar el consumo los días de baja asistencia). No necesita detallar plazos o formatos para ser considerada clara y concreta. Describe una acción definida y coherente con el contexto, por lo que merece 2 puntos."
+            }
+          }
+        },
+        "B3": {
+          "description": "Para cada acción propuesta, ¿es una acción realista?",
+          "note": "Para recibir 1 punto en este criterio, la propuesta debe ser factible dentro del rol y las posibilidades reales de gestión del emprendimiento Sabores Express. No deben considerarse realistas las soluciones que impliquen modificar políticas laborales de Infotech (como eliminar o alterar los días de home office, cambiar las reglas de asistencia del personal administrativo o de ventas, o reasignar empleados entre sedes). Estas decisiones exceden el ámbito de acción del emprendimiento. Solo deben considerarse realistas las medidas que la empresa de catering podría implementar directamente, como ajustar la producción, ofrecer promociones, modificar el menú o diseñar alternativas para los empleados en home office.",
+          "scores": {
+            "0": {
+              "label": "No",
+              "example": "Podríamos eliminar la posibilidad de que los empleados de administración trabajen desde casa los viernes.",
+              "explanation": "Esta propuesta no es realista porque implica modificar una política laboral de Infotech —la empresa empleadora del personal— y no del emprendimiento Sabores Express. El emprendimiento no tiene autoridad para cambiar las reglas de home office, asistencia o modalidades de trabajo del personal administrativo. La medida excede completamente su ámbito de acción y por lo tanto debe recibir 0 puntos."
+            },
+            "1": {
+              "label": "Sí",
+              "example": "Ofrecer promociones los viernes en la sede Norte. Esto compensaría la menor demanda provocada por la menor cantidad de empleados esos días en esa sede.",
+              "explanation": "La propuesta es realista porque se limita a acciones que la empresa de catering puede implementar directamente: diseñar promociones y ajustar su oferta comercial. No pretende modificar políticas laborales ni alterar decisiones institucionales de Infotech. Por lo tanto, corresponde asignar 1 punto."
+            }
+          }
+        }
+      }
+    },
+    "total_max_points": 10
+  },
+  "writing": {
+    "total_max_points": 10,
+    "criteria": {
+      "1": {
+        "name": "Ortografía y gramática",
+        "description": "Se evalúa la corrección ortográfica y gramatical del texto, incluyendo el uso adecuado de tildes, signos de puntuación, concordancia verbal y nominal, y mayúsculas. Se valora especialmente la redacción clara, fluida y cuidada, con frases bien estructuradas y sin errores que afecten la calidad o el tono profesional del mensaje.",
+        "note": "No se considera error el uso de solo signos de cierre (¿? / ¡!)",
+        "scores": {
+          "0": {
+            "label": "Errores graves o numerosos: el texto presenta múltiples errores ortográficos o gramaticales (tildes, concordancia, puntuación o mayúsculas) que se repiten a lo largo del texto. Estos errores afectan la claridad o dan una impresión de descuido, incluso si el texto se entiende en general.",
+            "example1": "viendo q las ventas bajaron en ese tiempo vamos a seguir mirando el tema puede ser q ese dia no gusto la comida o q habia menos gente en la empresa igual voy a seguir viendo gracias.",
+            "explanation1": "El texto presenta múltiples errores graves: ausencia sistemática de mayúsculas iniciales, uso de abreviaturas informales (“q”), omisión de tildes (“día”, “había”), problemas de puntuación (frase larga sin comas ni puntos), y falta de estructura sintáctica. Estos errores afectan tanto la claridad como el tono profesional del mensaje, por lo que corresponde asignar 0 puntos.",
+            "example2": "Hola Adriana Buenas..viendo los datos de las dos sucursales,zona norte tiene mas empleados en oficina q hacen home office y eso baja las ventas xq no van al comedor,en cambio zona sur estan todos presencial toda la semana por eso venden mas esos dias..",
+            "explanation2": "El texto presenta errores repetidos de tildes (“más”, “están”), uso de abreviaturas informales (“q”, “xq”), puntuación incorrecta (coma mal colocada, exceso de puntos, ausencia de espacios), problemas de concordancia y mayúsculas incorrectas (“zona norte”, “zona sur”). La acumulación de errores y el registro muy poco formal justifican asignar 0 puntos."
+          },
+          "1": {
+            "label": "Algunos errores o descuidos menores, pero perceptibles: se observan varios errores dispersos (tildes omitidas, puntuación inadecuada, uso impreciso de conectores o ligeras fallas de concordancia). No impiden la comprensión, pero restan fluidez o profesionalismo al texto.",
+            "example1": "Estimada Adriana,\nPor lo que veo en los datos la mayoria de los empleados de la sede Norte trabaja remoto los viernes, por eso bajan las ventas ese dia. En la sede Sur la gente asiste toda la semana y las ventas se mantienen. Segun el informe no parece que esten eligiendo otros lugares para almorzar.",
+            "explanation1": "El texto es comprensible, pero presenta varios errores menores: tildes omitidas (“mayoría”, “día”, “según”, “estén”), algunos problemas de puntuación (falta una coma tras “los datos”), y una redacción algo plana. Estos errores no impiden entender el mensaje, pero afectan la prolijidad y el nivel profesional del texto. Por eso recibe 1 punto.",
+            "example2": "Hola por lo que veo en la sede norte hay mas empleados de ventas que en la sur y eso puede explicar porque ahí bajaron las ventas los viernes ya q varios hacen home office esos dias",
+            "explanation2": "El texto contiene errores frecuentes de tildes (“más”, “por qué”, “días”), falta de puntuación (la frase es demasiado larga y sin cortes), y uso de abreviaturas informales (“q”). Aunque el mensaje es comprensible, el nivel de corrección es insuficiente para una redacción profesional. Corresponde asignar 1 punto."
+          },
+          "2": {
+            "label": "Redacción impecable o casi impecable: el texto está cuidadosamente escrito, sin errores ortográficos ni gramaticales perceptibles. La puntuación es precisa, las oraciones están bien estructuradas y el registro es fluido y natural. A lo sumo puede haber un error aislado que no afecta en absoluto la calidad del texto.",
+            "example1": "Buenas tardes, Adriana. Según los datos, la baja en ventas los viernes se explica por el trabajo remoto del personal administrativo de la sede Norte. En la sede Sur la asistencia es completa, por lo que las ventas se mantienen estables.",
+            "explanation1": "El texto está correctamente escrito: uso adecuado de tildes, puntuación precisa, frases claras y bien estructuradas. El registro es profesional y fluido. No presenta errores perceptibles, por lo que corresponde asignar 2 puntos.",
+            "example2": "Hola Adriana,\nRevisando los datos, observé que la baja en ventas ocurre principalmente los viernes, cuando gran parte del personal administrativo de la sede Norte trabaja remoto. De lunes a jueves las ventas son similares a la sede Sur.\nPropongo ajustar la producción de almuerzos los viernes y ofrecer menús promocionales o viandas para quienes hacen home office.\nQuedo a disposición para conversar las opciones.\nSaludos,",
+            "explanation2": "El texto es claro, está correctamente puntuado y no presenta errores ortográficos ni gramaticales. La redacción fluye de forma natural, con oraciones bien construidas y coherentes. El tono es profesional y adecuado al contexto. Es un ejemplo típico de 2 puntos."
+          }
+        }
+      },
+      "2": {
+        "name": "Claridad y legibilidad",
+        "description": "Se evalúa la claridad, precisión y fluidez del texto, **dentro del contexto del mail del jefe y de la consigna**. Las ideas deben expresarse de manera directa, ordenada y sin ambigüedades, y deben permitir que el jefe comprenda la respuesta a partir de la información del informe. Se valoran las oraciones bien construidas, la coherencia entre frases y la ausencia de repeticiones o redundancias. El texto se entiende fácilmente y transmite las ideas con naturalidad y economía de palabras.  Un texto es poco claro no solo cuando está mal escrito, sino también cuando, aunque sea breve o gramaticalmente correcto, **no desarrolla las ideas necesarias para responder lo que pide el jefe**, o resulta tan general que el jefe no entendería el mensaje.",
+        "note": "La repetición de ideas **debe penalizarse**. Los textos que no desarrollan las ideas mínimamente necesarias para que el jefe entienda la respuesta **en el contexto de su mail** también deben penalizarse. Un texto puede estar bien escrito a nivel lingüístico pero ser confuso o inútil si no permite comprender la respuesta requerida.",
+        "scores": {
+          "0": {
+            "label": "Texto confuso o desorganizado: el texto resulta difícil de comprender por errores de construcción o frases inconexas. Presenta repeticiones de ideas innecesarias o ambigüedades que impiden seguir el hilo argumental con claridad.",
+            "example1": "Hola Adriana, lo que pasó fue que se tardó más en entregar los almuerzos, en la sede sur, porque había menos personal, y también algunos empleados nuevos, que no conocían bien el proceso, y eso hizo que se acumularan los pedidos, y eso fue alterando todo.",
+            "explanation1": "El texto presenta baja claridad por varias razones: frases encadenadas sin estructura, falta de puntuación adecuada, repeticiones (“y eso”), ambigüedad sobre qué sede tiene el problema, y un desarrollo desordenado que mezcla causas sin jerarquía ni coherencia. Esto impide seguir el hilo argumental con fluidez.",
+            "example2": "Al analizar las ventas parece que bajaron en un momento pero no todo el tiempo, lo cual puede estar relacionado con distintas cosas que se dieron ese día y que al mismo tiempo hicieron que el resultado no fuera tan claro como se esperaba, porque si bien hubo menos gente también se ofreció otro menú y eso cambió la percepción general de los empleados, lo que nos lleva a pensar que hay que seguir observando.",
+            "explanation2": "La oración es excesivamente larga, con ideas encadenadas sin pausas ni estructura clara. Hay múltiples hipótesis superpuestas y ambigüedad en la secuencia de eventos. El resultado es un texto difícil de seguir, sin claridad ni economía de palabras.",
+            "example3": "Bajaron las ventas. Saludos,",
+            "explanation3": "Aunque está escrito de manera clara y sin errores, **no dice nada útil para el jefe**: no desarrolla la idea, no usa datos del informe y no responde ninguna de las preguntas. Por tanto, debe recibir 0 puntos."
+          },
+          "1": {
+            "label": "Claridad limitada: se identifican varias frases confusas, mal estructuradas o redundantes. La lectura requiere esfuerzo y el mensaje no fluye naturalmente. Las ideas aparecen sin una secuencia lógica o con expresiones poco precisas.",
+            "example1": "Estimada Adriana, buenos días luego de revisar los informes note que las ventas en la sede norte bajaron en las últimas semanas pero al mismo tiempo aumentaron un poco en la sur, quizás sería bueno revisar mejor a que se debe esa diferencia y ver si coincide con los días de trabajo remoto, cuando tenga más datos te los envío, saludos.",
+            "explanation1": "El texto expresa una idea general, pero presenta problemas de claridad: ausencia de puntuación adecuada, mezcla de ideas en una sola oración larga, uso impreciso de conectores (“pero al mismo tiempo”, “quizás”), y falta de una estructura interna que ordene los argumentos. El mensaje se entiende, pero requiere esfuerzo del lector.",
+            "example2": "Hola Adriana, revisando los datos veo que las ventas bajaron más en la sede Norte que en la Sur, sobre todo los viernes. Puede deberse a que esos días hay menos empleados o a que el menú no resulta atractivo, aunque no estoy segura de cuál de las dos cosas pesa más. También noté que las semanas con menos asistencia coinciden con los días en que hubo cambios en la comida.\nPor otro lado, al mirar otra vez los resultados me da la impresión de que la baja sigue siendo más fuerte los viernes, justo cuando hay menos gente. Eso refuerza la idea de que el problema podría ser tanto por la comida como por la cantidad de empleados, o incluso por ambas cosas al mismo tiempo. Tal vez habría que revisar mejor qué pasa esos días para entender bien por qué bajan las ventas.",
+            "explanation2": "El texto contiene repeticiones (“viernes”, “menos empleados”, “menos gente”), hipótesis contradictorias o no priorizadas, y exceso de información poco organizada. Aunque tiene contenido, la secuencia de ideas es poco clara y obliga a releer para comprender el mensaje.",
+            "example3": "Hola Adriana, bajaron un poco las ventas pero habría que ver más cosas. Saludos,",
+            "explanation3": "Responde algo, pero de forma superficial y sin desarrollar. No quedaría claro para el jefe cuál es el diagnóstico o cuáles son las posibles soluciones."
+          },
+          "2": {
+            "label": "Claridad aceptable pero mejorable: el texto se comprende en general, aunque contiene algunas oraciones extensas, o formulaciones poco naturales que interrumpen la fluidez. Puede haber alguna repetición de ideas. Requiere algo de esfuerzo para seguir el hilo.",
+            "example1": "De mi mayor consideración:\nHabiendo revisado la información sobre la baja en ventas de almuerzos en la sede Norte, considero que podría deberse al trabajo remoto del personal administrativo los días viernes, lo cual explicaría la diferencia con la sede Sur, aunque sería necesario analizar también otros factores para tener una visión más completa.\nPor lo expuesto, entiendo que la modalidad laboral es un elemento relevante en la disminución observada.\nSaludos cordiales,",
+            "explanation1": "El texto es comprensible y mantiene cierta coherencia, pero presenta oraciones largas, formulaciones formales poco naturales. Aunque se entiende, la fluidez es limitada y las ideas no están del todo optimizadas.",
+            "example2": "Buenas tardes Adriana: con respecto al informe, las ventas bajaron un poco en la sede Norte, no tanto en comparación con la Sur, y podría deberse a que los empleados llevan su propia comida porque no se informa con tiempo el menú. Por ese motivo considero importante planificar opciones semanales para evitar esa diferencia.",
+            "explanation2": "El mensaje es claro en términos generales, pero las oraciones son extensas."
+          },
+          "3": {
+            "label": "Claridad y legibilidad destacadas: el texto es muy claro y fluido. Las oraciones están bien construidas, no hay ambigüedades, o repetición de ideas. Se lee con naturalidad.",
+            "example1": "Hola Adriana, espero que estés bien.\nGracias por la información enviada, me resultó muy útil para entender la situación.\nPor lo que pude observar, la baja en las ventas ocurre principalmente los viernes, cuando la mayoría del personal administrativo trabaja desde casa. Como posible solución, propongo alternar los días de trabajo remoto para que una parte del equipo asista los viernes y así equilibrar el consumo.\nSaludos,\nMariana",
+            "explanation1": "El texto es muy claro, con ideas ordenadas y bien conectadas. Cada oración cumple una función específica y no hay repeticiones ni ambigüedades. La lectura es fluida y natural, y la información se presenta de manera precisa.",
+            "example2": "Hola Adriana, espero que estés bien.\nRevisando los datos, noté que la proporción de empleados que almuerzan en el comedor es similar en ambas sedes, por lo que el problema no parece estar en una menor preferencia por el servicio. En cambio, la diferencia se explica porque en la sede Norte hay más personal administrativo que trabaja remoto los viernes, lo que reduce la cantidad de almuerzos servidos ese día.\nSaludos,",
+            "explanation2": "El texto está muy bien estructurado, desarrolla las ideas con precisión y mantiene un hilo argumental claro. No hay redundancias y la exposición es directa y comprensible. La claridad y la legibilidad son excelentes."
+          }
+        }
+      },
+      "3": {
+        "name": "Organización del texto",
+        "description": "Se evalúa la estructura y el orden interno del texto. Debe seguir una secuencia lógica que incluya:\n1. una introducción que enmarque el mensaje o un saludo (por ejemplo, 'Hola XX, cómo estás?' o una breve referencia al mail del jefe),\nEjemplo de referencia al mail del jefe: “Revisé los datos que me enviaste y encontré lo siguiente:”\n2. un desarrollo en el que se respondan las preguntas planteadas,\n3. una sección con propuestas o sugerencias para resolver el problema, y\n4. un cierre que retome las ideas principales o una despedida.\nEjemplos de cierre o saludo:\n1.“Estoy a disposición para discutir cómo implementar las mejoras.”\n2.'Saludos,'\nTambién se valora la organización interna dentro de cada sección: el uso adecuado de párrafos, la coherencia en la secuencia de ideas y la ausencia de saltos temáticos.",
+        "note": "Tanto un saludo como una referencia al mail del jefe cuentan como introducción, y tanto una despedida como un cierre que retome la ideas principales o que diga 'Quedo a disposición' cuentan como cierre.",
+        "scores": {
+          "0": {
+            "label": "Texto desorganizado o sin estructura reconocible: no se distinguen las secciones principales o las ideas aparecen mezcladas y repetidas. Falta orden tanto en la estructura general como dentro de los párrafos.",
+            "example": "Al mirar las ventas pienso que puede tener que ver con los gustos de la gente, porque en la zona norte hay más empleados y también ganan mejor, entonces quizás prefieren comer afuera o pedir otra cosa. Igual en la semana las ventas son parecidas, pero los viernes bajan mucho, puede ser por eso o porque hay menos empleados. También habría que ver si los precios influyen, porque si se subieron puede que eso afecte, aunque no estoy seguro. Capaz se podría cambiar el menú o reducir el personal para equilibrar los costos y así mejorar las ventas, ya que todo está bastante caro últimamente y eso también puede influir",
+            "explanation": "El texto carece totalmente de estructura: no hay una introducción clara, no se responde en un bloque separado a las preguntas del informe, ni hay una sección de propuestas ni un cierre. Las ideas aparecen mezcladas (gustos, precios, asistencia, menú, costos) sin orden temático y en una única secuencia desordenada. No existen párrafos diferenciados ni una progresión lógica. Esto impide reconocer secciones y constituye una organización deficiente."
+          },
+          "1": {
+            "label": "Estructura débil o confusa: se percibe cierta intención de organización, pero faltan secciones o están mal delimitadas. Dentro de cada parte hay mezcla de ideas o saltos que dificultan la lectura. Los párrafos no agrupan bien las ideas.",
+            "example": "Buenas tardes Adriana: con respecto al informe que me enviaste, noté que las ventas bajaron un poco en la sede Norte, sobre todo los lunes y martes, posiblemente porque los empleados no conocen el menú con anticipación y prefieren traer su comida, por eso pienso que sería útil planificar el menú semanalmente para evitar esa situación.",
+            "explanation": "El texto intenta tener una estructura —abre con un saludo y ofrece un comentario final—, pero las secciones están mal delimitadas: mezcla diagnóstico y propuesta en la misma frase, no separa ideas en párrafos y no sigue la secuencia introductoria–análisis–propuesta–cierre. La lectura es posible, pero el orden es insuficiente y confuso, lo que justifica el puntaje intermedio-bajo."
+          },
+          "2": {
+            "label": "Organización parcial o irregular: el texto incluye la mayoría de las secciones, pero el orden o la articulación entre ellas es poco clara. Algunas partes están bien organizadas, mientras que otras presentan saltos. Los párrafos son comprensibles pero desbalanceados.",
+            "example": "Buenas tardes Adriana,\nRevisando los datos del informe, noto que la diferencia en las ventas entre ambas sedes podría deberse a varios factores combinados. En la sede Norte los viernes se vende menos, lo que coincide con el día en que la mayoría del personal administrativo trabaja desde casa, pero también podría influir el tipo de menú, ya que cuando cambia la oferta las ventas tienden a mejorar. En ese sentido, no parecería que los empleados estén eligiendo otras opciones fuera del comedor, ya que el porcentaje que almuerza allí es muy similar al de la sede Sur.\nAdemás, observé que la sede Norte tiene más personal administrativo y menos de ventas, lo que reduce la cantidad de personas que asisten toda la semana. Quizás sería útil revisar si las promociones o los platos especiales se están comunicando igual en ambas sedes, o si los días de menor asistencia podrían compensarse con opciones más atractivas.\nSaludos,",
+            "explanation": "El texto contiene la mayoría de las secciones esperadas (introducción, desarrollo, propuestas y cierre), pero la articulación es desigual. El diagnóstico combina demasiadas ideas en párrafos largos y con saltos temáticos. Las propuestas aparecen mezcladas con las explicaciones previas, lo que debilita la separación entre secciones. Aunque se reconoce un esfuerzo de estructura, no es completamente clara ni equilibrada."
+          },
+          "3": {
+            "label": "Organización clara y coherente: el texto sigue la secuencia esperada (introducción, respuestas, propuestas, cierre) y las ideas dentro de cada sección están bien agrupadas. Hay un uso adecuado de párrafos, aunque las transiciones o la progresión de ideas podrían ser más fluidas.",
+            "example": "Hola Adriana, ¿cómo estás?\nMuchas gracias por los datos enviados, me resultaron muy útiles para analizar la situación.\n Por lo que pude ver, las ventas bajan principalmente los viernes, mientras que el resto de la semana se mantienen estables. No parece que los empleados estén eligiendo otros lugares para almorzar, ya que los porcentajes de uso del comedor son muy similares entre sedes.\nLa diferencia se explica porque los viernes la mayoría del personal administrativo de la sede Norte trabaja desde casa. Como posible solución, podríamos alternar los días de home office o implementar promociones especiales ese día para incentivar el consumo.\nSaludos,",
+            "explanation": "El texto sigue correctamente la secuencia esperada: introducción clara, diagnóstico ordenado y en párrafos separados, propuestas coherentes y un cierre. Las ideas dentro de cada sección están bien agrupadas y no hay repeticiones o mezclas graves. La única razón por la que no alcanza 4 puntos es que la falta de separación entre diagnóstico y las propuestas."
+          },
+          "4": {
+            "label": "Organización excelente: el texto presenta una estructura completa y equilibrada: cada sección cumple su función, las ideas dentro de cada una están ordenadas, y las transiciones entre párrafos son naturales. La organización general y la interna contribuyen a una lectura fluida y lógica.",
+            "example": "Hola Adriana, ¿cómo estás?\nEstuve revisando el informe y te comparto mi análisis.\nQué pasa en la sede Norte\nLos datos muestran que la proporción de empleados que almuerzan en el comedor es similar en ambas sedes, por lo que no parece que el problema sea una menor preferencia por el servicio. La diferencia principal está en la asistencia: en la sede Norte hay más empleados de administración que trabajan desde casa los viernes, lo que reduce el número de almuerzos vendidos esos días. En la sede Sur, en cambio, la mayoría pertenece al área de ventas y asiste toda la semana, manteniendo estable el nivel de consumo.\nQué podemos hacer\nAjustar la cantidad de almuerzos preparados los viernes en la sede Norte.\nImplementar un menú especial o promociones para quienes asisten ese día.\nComunicar con anticipación las opciones semanales, para incentivar la reserva de almuerzos.\nEn resumen, la baja de ventas en la sede Norte se explica por la menor presencia del personal administrativo los viernes. Si ajustamos la oferta y reforzamos la comunicación, podríamos equilibrar las ventas entre ambas sedes.\nDecime si estás de acuerdo y diseñamos un plan para testear estas propuestas en las próximas semanas.\nSaludos,",
+            "explanation": "El texto presenta una estructura ejemplar: introducción clara, diagnóstico organizado en un bloque propio con ideas secuenciadas, propuestas separadas y presentadas en formato ordenado (viñetas), un cierre que retoma ideas y abre camino a próximos pasos. Las transiciones son naturales y cada sección cumple su función. La organización facilita una lectura fluida y lógica, por lo que corresponde la máxima puntuación."
+          }
+        }
+      },
+      "4": {
+        "name": "Registro adecuado",
+        "description": "Se evalúa si el tono del mail es apropiado para el contexto laboral y coherente con el tono del mail del jefe. El tono no debe ser excesivamente informal, debe ser cortes y profesional.\nEl criterio penaliza automáticamente (0 puntos) los casos en los que:\n1.El texto esté completamente escrito en mayúsculas (por considerarse una forma inapropiada o agresiva de comunicación).\n2. El texto incluya rastros evidentes de generación automática o placeholders propios de un asistente virtual, como firmas incompletas del tipo “[tu nombre]”, o texto no reemplazado.",
+        "note1": "En este criterio no se evalúa la presencia o la falta de saludo y despedida",
+        "note2": "Mencionar explícitamente que se utilizó una herramienta de IA para elaborar el diagnóstico **no se penaliza**",
+        "scores": {
+          "0": {
+            "label": "El tono del mail es demasiado informal, coloquial o poco cortés en relación con el tono del mail del jefe. También se asigna 0 puntos si el texto está completamente en mayúsculas, si deja evidencia explícita de interacción con ChatGPT u otra IA, o si el texto no presenta un tono profesional acorde al mail del jefe.",
+            "example1": "Buenas,\nSegún el informe que me mandaste creo que el problema está en la asistencia de los empleados los viernes, por eso hay menos ventas esos días. también puede influir que a fin de mes muchos gastan menos y eso baja las compras en el comedor.\nAbrazo,",
+            "explanation1": "El tono es excesivamente informal para un intercambio laboral: usa saludos coloquiales (“Buenas”, “Abrazo”). No mantiene la formalidad esperable en el contexto definido por el mail del jefe.",
+            "example2": "Hola Adriana, ¿cómo estás?\nSegún el informe que me mandaste creo que el problema está en la asistencia de los empleados los viernes, por eso hay menos ventas esos días. también puede influir que a fin de mes muchos gastan menos y eso baja las compras en el comedor.\nSaludos,\n[Tu nombre]",
+            "explanation2": "Incluye un placeholder típico de un asistente virtual ('[tu nombre]'), lo cual activa la penalización automática.",
+            "example3": "HOLA ADRIANA, COMO ESTA?\nLE ESCRIBO PARA DECIRLE QUE SEGUN LOS DATOS NO HAY GRANDES DIFERENCIAS ENTRE LAS SEDES. IGUAL TENDRIA QUE MANDARME MAS INFORMACION PARA ENTENDER BIEN.\nSALUDOS CORDIALES,",
+            "explanation3": "El texto está completamente en mayúsculas, lo cual se considera un tono inadecuado o agresivo en comunicación escrita. Esto activa automáticamente el puntaje 0, independientemente del contenido."          
+          },
+          "1": {
+            "label": "Registro adecuado: el tono es respetuoso y coherente acorde con el tono del mail del jefe. El texto mantiene un registro profesional y apropiado para el contexto laboral.",
+            "example": "Hola Adriana, ¿cómo estás?\nSegún el informe que me mandaste creo que el problema está en la asistencia de los empleados los viernes, por eso hay menos ventas esos días. también puede influir que a fin de mes muchos gastan menos y eso baja las compras en el comedor.\nSaludos cordiales,",
+            "explanation": "El tono es respetuoso, profesional y consistente con el estilo del mail del jefe. No hay expresiones coloquiales, excesivamente informales ni agresivas. Se mantiene un registro adecuado para un intercambio laboral, con cortesía y neutralidad apropiadas. No hay mayúsculas inapropiadas ni rastros de interacción con IA. Por lo tanto, corresponde la puntuación completa."
+          }
+        }
+      }
+    }
+  }
+}

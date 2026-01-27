@@ -1,0 +1,38 @@
+{
+  "follow_up_question": [
+    {
+      "question": "¿Me contarías brevemente por qué es que estamos vendiendo menos almuerzos en la sede Norte?",
+      "correct_answer": "Sí. La sede Norte tiene una mayor proporción de empleados del área de administración, mientras que la sede Sur tiene una mayor proporción del área de ventas. Los empleados de administración tienen permitido trabajar desde su casa los viernes, mientras que los de ventas deben asistir presencialmente de lunes a viernes. La explicación más probable para la diferencia de ventas entre sedes los días viernes es que la sede Norte tiene más empleados de administración, y estos se quedan trabajando desde su casa los viernes."
+    }
+  ],
+  "content_rubric": [
+    {
+      "score": 0,
+      "description": "La respuesta es incorrecta: no identifica el mecanismo causal correcto que genera el problema, y/o introduce explicaciones irrelevantes o equivocadas.",
+      "example1": "Sí, las diferencias en las ventas entre ambas sedes probablemente se deban a la composición del personal. Es probable que los empleados de administración, que tienen mayor presencia en la sede Norte, perciban ingresos más bajos que los empleados de ventas, lo que podría explicar el menor nivel de ventas en esa sede.",
+      "explanation1": "No identifica el mecanismo correcto: no menciona el home office ni que el problema ocurre los viernes, e introduce causas que no están en el caso.",
+      "example2": "La diferencia parece deberse a cómo está organizada la plantilla y a las distintas formas de asistencia al trabajo, no a un problema del servicio de almuerzos.",
+      "explanation2": "No identifica el mecanismo específico: no menciona el home office ni que el problema ocurre los viernes.",
+      "example3": "Las ventas más bajas parecen deberse a que la gente viene menos y a posibles problemas del menú, como precios o variedad.",
+      "explanation3": "No identifica el mecanismo correcto, o lo menciona de forma muy superficial, e introduce causas que no aparecen en el caso; tampoco menciona que el problema ocurre los viernes."
+    },
+    {
+      "score": 1,
+      "description": "La respuesta es correcta pero incompleta: menciona parte de la idea central que subyace al problema, pero no desarrolla el mecanismo causal relevante de manera clara o deja elementos esenciales sin explicar.",
+      "example1": "Sí, la sede Norte tiene empleados que trabajan desde casa por eso vende menos.",
+      "explanation1": "Menciona que en la sede Norte hay más home office, pero no aclara que esto ocurre específicamente los viernes.",
+      "example2": "Los datos de la encuesta de preferencias no son del todo claros porque los viernes varios empleados de administración de la sede Norte trabajan desde casa, así que habría que revisar mejor cuántas personas estuvieron presentes antes de sacar conclusiones.",
+      "explanation2": "Menciona el home office de los viernes, pero no lo señala explícitamente como la causa de la menor venta de almuerzos.",
+      "example3": "Por lo que estuve viendo, los viernes suele haber menos gente en la oficina y eso puede estar afectando las ventas, así que quizá convenga pensar en algunas acciones para estimular la demanda ese día.",
+      "explanation3": "Menciona que los viernes hay menos presencialidad, pero no identifica que esto se debe a la mayor proporción de empleados de administración en la sede Norte ni explica claramente que ese es el mecanismo causal de la menor venta de almuerzos."
+    },
+    {
+      "score": 2,
+      "description": "La respuesta es correcta y completa: identifica claramente la idea central que subyace al problema y explica de manera precisa el mecanismo causal relevante, conectando todos los elementos necesarios para justificar la conclusión.",
+      "example1": "Sí, la sede Norte vende menos que la sede Sur los viernes porque, en comparación con la sede Sur, tiene más empleados de administración que tienen permitido trabajar desde casa ese día.",
+      "explanation1": "Identifica correctamente que la sede Norte tiene más empleados de administración que hacen home office los viernes, explicando así la caída de ventas ese día.",
+      "example2": "La diferencia se da los viernes porque la sede Norte tiene más empleados de administración que trabajan desde casa ese día, mientras que en la sede Sur la mayoría va presencialmente.",
+      "explanation2": "Identifica correctamente que la sede Norte tiene más empleados de administración que hacen home office los viernes, lo que explica la menor venta de almuerzos ese día."
+    }
+  ]
+}

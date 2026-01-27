@@ -1,0 +1,282 @@
+{ 
+  "task_context": {
+    "description": "Trabajás en un negocio en Argentina de venta online de electrodomésticos importados. En enero de 2025, el dueño del negocio te envía el siguiente correo electrónico:",
+    "email_from_boss": "De: Luis González <lgonzalez@gmail.com>\nAsunto: problema con ventas de estufas y ventiladores\nBuen día,\nEspero que estés bien. Te escribo porque estuve revisando las ventas de nuestros productos y noté algo raro con las estufas y ventiladores portátiles. Históricamente, nuestras ventas de ventiladores aumentan en verano y las de estufas en invierno. Sin embargo, en 2024 esto no ocurrió. ¿Podrías ayudarme a entender lo que está pasando?\nAdjunto un informe que preparó mi asistente para ayudarnos a entender mejor la situación. A partir de los datos de este informe, me gustaría que me compartas tu mirada sobre los siguientes puntos:\nPara entender si este problema es específico a estos dos productos, ¿te fijarías si en 2024 las ventas de aires acondicionados fueron diferentes a lo normal?\nMi asistente mencionó que el año pasado hubo trabas a la importación de ciertos productos electrónicos. ¿Te fijarías si esto podría tener algo que ver?\n¿Algo más del informe te parece relevante para entender lo que está pasando?\nPor favor fundamentá bien tus respuestas, ya que planeo compartir este diagnóstico con otros miembros del equipo.\nPor último, según tu análisis, ¿qué sugerirías que hagamos para solucionar este problema?\nQuedo atento a tu respuesta.\nSaludos,\nLuis",
+    "informe_adjunto":{
+      "resumen": "Resumen del problema: Históricamente, nuestras ventas de ventiladores aumentan en verano y las de estufas en invierno. Sin embargo, en 2024 esto no ocurrió.",
+      "grafico": "1) Evolución de las ventas de aires acondicionados, estufas y ventiladores portátiles durante los últimos dos años:\nhttps://i.imgur.com/3yY4hC8.png",
+      "tabla1": "2) La tabla a continuación indica, para cada producto, el número de unidades pedidas al importador y entregadas por el mismo para cada semestre en 2023 y 2024.\\n\\n\\begin{tabular}{l cc cc cc}\\n\\toprule\\n& \\multicolumn{2}{c}{\\textbf{Aires acondicionados}} & \\multicolumn{2}{c}{\\textbf{Estufas portátiles}} & \\multicolumn{2}{c}{\\textbf{Ventiladores portátiles}} \\\\\\n\\cmidrule(lr){2-3} \\cmidrule(lr){4-5} \\cmidrule(lr){6-7}\\n\\textbf{Período} &\\n\\makecell[c]{\\textbf{Unidades}\\\\\\textbf{pedidas}} &\\n\\makecell[c]{\\textbf{Unidades}\\\\\\textbf{entregadas}} &\\n\\makecell[c]{\\textbf{Unidades}\\\\\\textbf{pedidas}} &\\n\\makecell[c]{\\textbf{Unidades}\\\\\\textbf{entregadas}} &\\n\\makecell[c]{\\textbf{Unidades}\\\\\\textbf{pedidas}} &\\n\\makecell[c]{\\textbf{Unidades}\\\\\\textbf{entregadas}} \\\\\\n\\midrule\\nEne-Jun 2023 & 742 & 741 & 2,172 & 2,172 & 2,145 & 2,145 \\\\\\nJul-Dic 2023 & 494 & 494 & 2,125 & 2,127 & 2,175 & 2,175 \\\\\\nEne-Jun 2024 & 687 & 644 & 2,182 & 2,183 & 2,130 & 2,131 \\\\\\nJul-Dic 2024 & 688 & 619 & 2,125 & 2,126 & 2,150 & 2,150 \\\\\\n\\bottomrule\\n\\end{tabular}",
+      "tabla2": "3) Cada trimestre enviamos un correo electrónico a nuestra base de clientes publicitando ciertos productos. A continuación, se indica qué productos fueron incluidos en este correo en los últimos dos años:\nMar 2023: Ventilador portátil, televisor, aire acondicionado.\nAbr - Jun 2023: Heladera, lavarropas, microondas, estufa portátil.\nJul - Sep 2023: Estufa portátil, caloventor, lavavajillas.\nOct - Dic 2023: Computadora, televisor, aire acondicionado, ventilador portátil.\nEne - Mar 2024: Pava eléctrica, aire acondicionado, estufa portátil.\nAbr - Jun 2024: Televisor, computadora, ventilador portátil, microondas.\nJul - Sep 2024: Lavavajillas, lavarropas, horno eléctrico.\nOct - Dic 2024: Aire acondicionado, televisor, caloventor."},
+    "consigna": "Escribí a continuación un correo con la respuesta a Luis:\nPara: Luis González\nAsunto: Re: problema con ventas de estufas y ventiladores."
+  },
+  "content": {
+    "diagnosis": {
+      "max_points": 6,
+      "questions": {
+        "A1": {
+          "prompt": "Para entender si este problema es específico a estos dos productos, ¿te fijarías si en 2024 las ventas de aires acondicionados fueron diferentes a lo normal?",
+          "correct_answer": "Como puede verse en el gráfico, en 2024, las ventas de aire acondicionado siguieron el mismo patrón estacional que 2023. En particular, las ventas fueron mayores en los meses de verano, y menores en los meses de invierno. Por lo tanto, el problema es específico a estos dos productos (ventiladores portátiles y estufas portátiles).",
+          "note": "Debe mencionar la evolución de las ventas de los aires acondicionados para recibir puntos en esta pregunta. En caso contrario debe recibir 0 puntos en esta pregunta. Aludir a la causa real del problema no alcanza para recibir un punto en este inciso. No hace falta que se proporcionen ejemplos numéricos para que la respuesta esté completa (2 puntos), pero si debe hacerse referencia a los datos proporcionados.",
+          "scores": {
+            "0": {
+              "label": "No responde correctamente.",
+              "example": "La venta de aires acondicionados siguió un patrón estacional en 2023, pero se mantuvo constante en 2024.",
+              "explanation": "No responde correctamente porque afirma un patrón inexistente en los datos: inventa que 2024 fue “constante” y no reconoce que la estacionalidad se mantiene. Además, no establece si el problema es específico a los otros productos."
+            },
+            "1": {
+              "label": "Menciona la respuesta correcta, pero de manera superficial.",
+              "example": "La venta de aires acondicionados en 2023 no fue diferente a la de 2024.",
+              "explanation": "Menciona la idea central —que 2024 no difiere de 2023— pero de forma superficial. No describe el patrón estacional ni hace referencia explícita a los datos provistos."
+            },
+            "2": {
+              "label": "Menciona la respuesta correcta de manera detallada, y justifica adecuadamente.",
+              "example": "De acuerdo al gráfico provisto en el informe, tanto en 2023 como en 2024 la venta de aires acondicionados siguió un patrón estacional, aumentando en verano y cayendo en invierno.",
+              "explanation": "Responde de forma completa porque describe correctamente la evolución de las ventas en ambos años, utiliza explícitamente la información del gráfico y explica el patrón estacional. La justificación es precisa y se basa en los datos provistos."
+            }
+          }
+        },
+        "A2": {
+          "prompt": "Mi asistente mencionó que el año pasado hubo trabas a la importación de ciertos productos electrónicos. ¿Te fijarías si esto podría tener algo que ver?",
+          "correct_answer": "Como puede verse en las tablas, no hubo faltantes en la entrega de ventiladores portátiles o estufas portátiles el año pasado. Las unidades entregadas fueron iguales o mayores que las unidades pedidas. Por lo tanto, las trabas a la importación no son una explicación para el problema que se observa.",
+          "note": "Debe mencionar pedidos, entregas, stock de producto o aspectos similares para que su puntaje en esta pregunta no sea 0. Aludir a la causa real del problema no alcanza para recibir un punto en este inciso. Si responde que la causa del problema son las importaciones debe recibir 0 puntos en este inciso. No hace falta que se proporcionen ejemplos numéricos para que la respuesta esté completa (2 puntos), pero si debe hacerse referencia a los datos proporcionados.",
+          "scores": {
+            "0": {
+              "label": "No responde correctamente",
+              "example": "Sí, las trabas a las importaciones impidieron que tengamos suficiente stock para enfrentar los períodos con picos de demanda.",
+              "explanation": "Responde incorrectamente porque afirma que hubo problemas de stock cuando los datos muestran lo contrario. No usa información del informe y atribuye el problema a las importaciones, lo cual contradice la evidencia."
+            },
+            "1": {
+              "label": "Menciona la respuesta correcta, pero de manera superficial",
+              "example": "En 2023 y 2024 no tuvimos problemas con las unidades pedidas y entregadas de estufas y ventiladores portátiles.",
+              "explanation": "Menciona la idea central —que no hubo problemas entre pedidos y entregas— pero de modo superficial. No utiliza detalles del informe ni explica por qué esto descarta las trabas a la importación como causa del problema."
+            },
+            "2": {
+              "label": "Menciona la respuesta correcta de manera detallada, y justifica adecuadamente",
+              "example": "No parece haber habido grandes trabas a la importación: la cantidad de productos pedidos y entregados se mantuvo prácticamente igual a lo largo de los distintos períodos. Salvo en algunos momentos puntuales en el caso de los aires acondicionados, las unidades entregadas fueron siempre iguales o superiores a las unidades solicitadas.",
+              "explanation": "Responde de manera completa porque usa información detallada de las tablas, compara pedidos y entregas y explica por qué esto descarta faltantes. Justifica correctamente la conclusión incorporando los datos del informe."
+            }
+          }
+        },
+        "A3": {
+          "prompt": "¿Algo más del informe te parece relevante para entender lo que está pasando?",
+          "correct_answer": "Sí. Como puede verse en el informe, los ventiladores portátiles fueron promocionados en los meses de mayor demanda en 2023 (ene-mar y oct-dic), mientras que en 2024 fueron promocionados sólo en abril-junio. Análogamente, las estufas portátiles fueron promocionadas en los meses de mayor demanda en 2023 (abr-sep), mientras que en 2024 sólo fueron promocionadas en enero-marzo. Es decir, en 2024, durante los meses donde cada producto tiene mayor demanda, estos productos no fueron incluidos en los envíos publicitarios. Esto probablemente hizo que los clientes no recibieran recordatorios u ofertas de estos productos en el momento de mayor necesidad, llevando a menores ventas en los meses donde uno esperaría que las ventas fuesen mayores.",
+          "note": "No hace falta que se proporcionen ejemplos numéricos para que la respuesta esté completa (2 puntos), pero si debe hacerse referencia a los datos proporcionados.",
+          "scores": {
+            "0": {
+              "label": "No responde correctamente.",
+              "example": "Sí, la falta de estacionalidad en las ventas de los ventiladores podría explicarse por una modificación en las preferencias de los consumidores que, por las condiciones macroeconómicas, ahora eligen los aires acondicionados.",
+              "explanation": "Responde incorrectamente porque propone una hipótesis no respaldada por el informe y no utiliza ningún dato provisto. Además, desvía la explicación hacia cambios en preferencias sin considerar la información relevante de marketing disponible en el informe."
+            },
+            "1": {
+              "label": "Menciona la respuesta correcta, pero de manera superficial.",
+              "example": "Sí, el problema pareciera ser la estrategia de marketing.",
+              "explanation": "Identifica el área relevante, pero de manera superficial. No se apoya en los datos del informe ni explica qué aspecto concreto de la estrategia publicitaria cambió entre años o cómo eso afecta las ventas."
+            },
+            "2": {
+              "label": "Menciona la respuesta correcta de manera detallada, y justifica adecuadamente.",
+              "example": "Sí, los datos adjuntos sugieren que el problema radica en el diseño de nuestra estrategia de marketing. Mientras que en 2023 logramos que la publicidad acompañara adecuadamente el patrón estacional de las ventas, en 2024 esto no ocurrió, lo que nos impidió aprovechar los picos de demanda de ventiladores y estufas.",
+              "explanation": "Responde completamente porque utiliza la evidencia del informe para comparar la estrategia de marketing entre años, identifica el desajuste con los picos estacionales y explica claramente por qué esto afecta las ventas. Justifica la conclusión con datos del informe."
+            }
+          }
+        }
+      }
+    },
+    "solution": {
+      "max_points": 4,
+      "prompt": "Las propuestas del participante pueden incluir una o varias acciones para solucionar el problema. Cada acción debe evaluarse de manera individual según los criterios B1, B2 y B3, sin elegir una 'mejor' acción dentro de la grilla. El objetivo de esta sección es definir cómo puntuar cada acción concreta en función de si aborda la causa del problema, cuán específica es y cuán realista resulta.",
+      "problem_to_solve": "En 2024 las ventas de estufas y ventiladores no siguen un patrón estacional",
+      "criteria": {
+        "B1": {
+          "description": "Para cada acción propuesta, ¿la solución propuesta lidia directamente con la causa del problema?",
+          "note": "Para recibir 1 punto en este criterio, el participante debe mencionar explícitamente que la publicidad debe ajustarse a la estacionalidad o, en su defecto, haber identificado claramente ese problema en A3. Si en A3 reconoció la falta de estacionalidad y en B1 alude a la publicidad de forma coherente con ese diagnóstico, puede recibir 1 punto. Si no lo mencionó en A3 ni en B1, o solo indica de manera genérica que se debe publicitar más, debe recibir 0 puntos.",
+          "note2": "No debe asignarse puntaje en este criterio si el participante solo identifica correctamente la causa del problema en A3 (la falta de estacionalidad en las publicidades de estufas y ventiladores), pero no propone una solución explícita para resolverlo en B1. Reconocer la causa no equivale a ofrecer una medida correctiva. La propuesta debe indicar de manera clara qué acción concreta se tomaría para abordar esa falta de estacinoalidad en las publicidades. No se debe otorgar puntaje en B1 por diagnóstico correcto en A3, ni por alusiones generales a la causa del problema en B1.",
+          "note3": "Si la propuesta consiste únicamente en aplicar descuentos, promociones, ofertas estacionales o bajar precios —sin ajustar explícitamente la estacionalidad de la publicidad— debe recibir 0 puntos. Estas acciones no abordan la causa del problema identificada en la consigna.",
+          "scores": {
+            "0": {
+              "label": "No",
+              "example1": "Deberíamos dejar de vender los ventiladores, está claro que los consumidores prefieren los aires acondicionados.",
+              "explanation1": "No responde correctamente porque propone una acción que no aborda la causa del problema. Ignora la evidencia del informe y no hace ninguna referencia a la estacionalidad ni al rol de la publicidad, por lo que no sugiere una solución vinculada al diagnóstico correcto.",
+              "example2": "Podríamos ofrecer descuentos en la compra de ventiladores en verano y descuentos en la compra de calefactores en invierno.",
+              "explanation2": "No responde correctamente porque propone una acción que no aborda la causa del problema -la falta de estacionalidad en las publicidades de los ventiladores y de las estufas-."
+            },
+            "1": {
+              "label": "Sí",
+              "example": "Deberíamos repensar la estrategia de marketing para que sea consistente con los patrones de demanda que maximizan nuestras ventas. Podríamos, por ejemplo, replicar lo que hicimos 2023. Bajo este esquema las ventas de los ventiladores y de las estufas mostraron el patrón estacional.",
+              "explanation": "Responde correctamente porque propone explícitamente ajustar la publicidad para que acompañe los momentos de mayor demanda. Conecta la solución con el diagnóstico basado en la estacionalidad y plantea una acción concreta consistente con los datos del informe."
+            }
+          }
+        },
+        "B2": {
+          "description": "Para cada acción propuesta, ¿es una acción concreta/específica?",
+          "note": "Este criterio evalúa el grado de concreción y detalle de la propuesta. Es decir, cuán claramente se entiende qué acción se propone. Para obtener 2 puntos, la propuesta debe describir una acción definida, aplicable al contexto del local, y dejar claro qué se haría y con qué objetivo. **Es condición necesaria para recibir 2 puntos que la propuesta especifique explícitamente en qué época del año deben promocionarse las estufas y los ventiladores (por ejemplo, estufas en invierno y ventiladores en verano).** Si se mencionan varias opciones sin desarrollo, si las acciones son vagas (por ejemplo, 'repensar la estrategia de marketing', 'mejorar la publicidad' o 'adecuar la periodicidad'), corresponde 1 punto o menos.",
+          "scores": {
+            "0": {
+              "label": "Propuesta demasiado general o abstracta: no se entiende bien qué acción concreta se propone.",
+              "example1": "Repensar la estrategia de marketing.",
+              "explanation1": "La propuesta es demasiado vaga: no especifica qué aspecto de la estrategia cambiar, ni qué acción concreta se realizaría. No permite entender cómo se implementaría la solución.",
+              "example2": "Los correos electrónicos deberían ser completamente estacionales.",
+              "explanation2": "La propuesta es demasiado general: no aclara qué cambios concretos se realizarían en la práctica. No indica qué productos se promocionarían, en qué momentos, ni cómo se ajustaría el calendario de envíos, por lo que no permite entender la acción específica que se propone."
+            },
+            "1": {
+              "label": "Propuesta con cierta especificidad, pero sin suficiente detalle operativo o contextual.",
+              "example1": "Adecuar la periodicidad de las publicidades.",
+              "explanation1": "La propuesta es general y sin detalles operativos. Indica una dirección de acción, pero no explica cómo se haría ni a qué cambios concretos se refiere.",
+              "example2": "Tendríamos que mantener las campañas de cada producto en su temporada correspondiente.",
+              "explanation2": "La propuesta es general y sin detalles operativos. No menciona a los ventiladores ni a las estufas, ni cuando debe promocionarse cada uno de estos productos.",
+              "example3": "Los correos deben enviarse al inicio de la temporada de uso, no una vez que ya terminó.",
+              "explanation3": "La propuesta es general y sin detalles operativos. No menciona a los ventiladores ni a las estufas, ni cuando debe promocionarse cada uno de estos productos."
+
+            },
+            "2": {
+              "label": "Propuesta clara y específica dentro del contexto de la empresa: se entiende qué acción se propone y cómo podría implementarse en términos generales. No es necesario que la propuesta incluya plazos, métricas o formatos de implementación.",
+              "example": "Modificar el calendario de campañas para que las estufas se promocionen en los meses de invierno, y los ventiladores en los meses de verano, aprovechando los picos estacionales de demanda.",
+              "explanation": "La propuesta es clara y aplicable al contexto: detalla qué acción específica se haría (ajustar el calendario de campañas) y con qué objetivo (aprovechar la estacionalidad). Se entiende exactamente cómo implementarla de manera general."
+            }
+          }
+        },
+        "B3": {
+          "description": "Para cada acción propuesta, ¿es una acción realista?",
+          "scores": {
+            "0": {
+              "label": "No",
+              "example": "Podríamos rediseñar por completo los ventiladores y estufas portátiles para que ambos productos sean útiles durante todo el año: por ejemplo, que funcionen como ventilador en verano y como estufa en invierno.",
+              "explanation": "No es realista porque implica rediseñar los productos desde cero, algo costoso, técnicamente complejo y fuera del alcance de una respuesta operativa. No se ajusta al contexto del negocio ni a las capacidades esperables para resolver el problema identificado."
+            },
+            "1": {
+              "label": "Sí",
+              "example": "Modificar la estrategia de marketing para que los ventiladores sean promocionados en verano y las estufas en invierno.",
+              "explanation": "Es una propuesta realista porque se trata de un ajuste organizacional factible, de bajo costo y alineado con las operaciones habituales del negocio. Puede implementarse sin cambios estructurales ni tecnológicos"
+            }
+          }
+        }
+      }
+    },
+    "total_max_points": 10
+  },
+  "writing": {
+    "total_max_points": 10,
+    "criteria": {
+      "1": {
+        "name": "Ortografía y gramática",
+        "description": "Se evalúa la corrección ortográfica y gramatical del texto, incluyendo el uso adecuado de tildes, signos de puntuación, concordancia verbal y nominal, y mayúsculas. Se valora especialmente la redacción clara, fluida y cuidada, con frases bien estructuradas y sin errores que afecten la calidad o el tono profesional del mensaje.",
+        "note": "No se considera error el uso de solo signos de cierre (¿? / ¡!)",
+        "scores": {
+          "0": {
+            "label": "Errores graves o numerosos: el texto presenta múltiples errores ortográficos o gramaticales (tildes, concordancia, puntuación o mayúsculas) que se repiten a lo largo del texto. Estos errores afectan la claridad o dan una impresión de descuido, incluso si el texto se entiende en general.",
+            "example1": "hola buenas tarde, estube mirando los datos y el balence no da igual por que los aire no enfrian bien y los ventiladore usa mucha corriente directa eso genera gasto alto, tendria que ver si hay sucidio en la luz o no.",
+            "explanation1": "Presenta múltiples errores ortográficos (“estube”, “balence”, “aire”, “ventiladore”, “sucidio”), fallas de concordancia y omisión de mayúsculas. Los errores afectan la claridad y muestran descuido sostenido en la escritura.",
+            "example2": "Buenos dias estimado, segun el analisis que pude ver los dato no coinciden con el informe, el restraso en las entregas y la variacion climitica puede haber afectado las ventas de los aires acondicionados. Seria bueno revizar el perido donde surgio el inconveniente para tener un analisis mas sertero.",
+            "explanation2": "Tiene numerosos errores ortográficos recurrentes (“dias”, “segun”, “dato”, “restraso”, “climitica”, “revizar”, “perido”, “sertero”), además de problemas de concordancia. La acumulación de errores afecta la calidad general del texto"
+          },
+          "1": {
+            "label": "Algunos errores o descuidos menores, pero perceptibles: se observan varios errores dispersos (tildes omitidas, puntuación inadecuada, uso impreciso de conectores o ligeras fallas de concordancia). No impiden la comprensión, pero restan fluidez o profesionalismo al texto.",
+            "example1": "buen día luis,\nsegún los datos que revisé, las ventas de la sede norte bajaron un poco en julio pero se mantuvieron estables el resto del año. puede ser que los empleados eligieran comer afuera esos días o que el menú no fuera tan variado. sería bueno revisar eso para los próximos meses.\nsaludos",
+            "explanation1": "Presenta varios descuidos menores: faltan mayúsculas en nombres propios y al inicio de frases, y hay ligeros problemas de puntuación. Aunque se entiende bien, la redacción pierde formalidad y prolijidad",
+            "example2": "Buenos dias Luis,\nRevisando los datos del informe veo que las ventas de estufas y ventiladores se mantuvieron bastante estables durante todo el año, sin grandes variaciones. En comparacion con 2023, las estufas vendieron mas en invierno y los ventiladores en verano, pero en 2024 esa diferencia casi no se nota.\nNo parece haber problemas con las importaciones, aunque la publicidad pudo haber sido escasa. Seria bueno revisar si los clientes recibieron la informacion a tiempo y si las campañas fueron iguales en todas las regiones.\nSaludos cordiales.",
+            "explanation2": "El texto tiene varias tildes omitidas (“dias”, “comparacion”, “mas”, “informacion”, “Seria”), y la puntuación podría ser más cuidada. Los errores no impiden la comprensión, pero restan profesionalismo."
+          },
+          "2": {
+            "label": "Redacción impecable o casi impecable: el texto está cuidadosamente escrito, sin errores ortográficos ni gramaticales perceptibles. La puntuación es precisa, las oraciones están bien estructuradas y el registro es fluido y natural. A lo sumo puede haber un error aislado que no afecta en absoluto la calidad del texto.",
+            "example1": "Buenas tardes, Adriana. Según los datos, la baja en ventas los viernes se explica por el trabajo remoto del personal administrativo de la sede Norte. En la sede Sur la asistencia es completa, por lo que las ventas se mantienen estables.",
+            "explanation1": "No presenta errores ortográficos ni gramaticales. Las frases están bien construidas, con puntuación clara y registro adecuado. La redacción es fluida y profesional.",
+            "example2": "Hola Adriana,\nRevisando los datos, observé que la baja en ventas ocurre principalmente los viernes, cuando gran parte del personal administrativo de la sede Norte trabaja remoto. De lunes a jueves las ventas son similares a la sede Sur.\nPropongo ajustar la producción de almuerzos los viernes y ofrecer menús promocionales o viandas para quienes hacen home office.\nQuedo a disposición para conversar las opciones.\nSaludos,",
+            "explanation2": "El texto está muy bien escrito: sin errores de ortografía, con estructuras claras y puntuación correcta. El registro es natural, profesional y coherente en todo el mensaje."
+          }
+        }
+      },
+      "2": {
+        "name": "Claridad y legibilidad",
+        "description": "Se evalúa la claridad, precisión y fluidez del texto, **dentro del contexto del mail del jefe y de la consigna**. Las ideas deben expresarse de manera directa, ordenada y sin ambigüedades, y deben permitir que el jefe comprenda la respuesta a partir de la información del informe. Se valoran las oraciones bien construidas, la coherencia entre frases y la ausencia de repeticiones o redundancias. El texto se entiende fácilmente y transmite las ideas con naturalidad y economía de palabras.  Un texto es poco claro no solo cuando está mal escrito, sino también cuando, aunque sea breve o gramaticalmente correcto, **no desarrolla las ideas necesarias para responder lo que pide el jefe**, o resulta tan general que el jefe no entendería el mensaje.",
+        "note": "La repetición de ideas **debe penalizarse**. Los textos que no desarrollan las ideas mínimamente necesarias para que el jefe entienda la respuesta **en el contexto de su mail** también deben penalizarse. Un texto puede estar bien escrito a nivel lingüístico pero ser confuso o inútil si no permite comprender la respuesta requerida.",
+        "scores": {
+          "0": {
+            "label": "Texto confuso o desorganizado: el texto resulta difícil de comprender por errores de construcción o frases inconexas. Presenta repeticiones de ideas innecesarias o ambigüedades que impiden seguir el hilo argumental con claridad.",
+            "example1": "La gente compra cuando le conviene…si no tiene plata busca lo más barato y si suben los precios deja de comprar porque no le alcanza y capaz espera alguna oferta o descuento y después se olvida del producto por eso bajan las ventas…no es tan dificil de ver.",
+            "explanation1": "El texto es confuso y desordenado: mezcla ideas sin conectores claros, y presenta frases encadenadas sin estructura. Esto dificulta seguir el argumento.",
+            "example2": "puede ser que sea por el tema de las importasiones o porque los precios cambiaron pero si la venta subio en otro momento tal ves sea porque la gente aprovecho las ofertas o porque no habia stock igual con la situacion del pais es dificil saber bien que paso pero seguro algo influyo.",
+            "explanation2": "La frase es larga y caótica, con varias ideas juntas sin orden lógico. Hay repeticiones, ambigüedades y problemas que afectan seriamente la legibilidad. No se entiende claramente el mensaje.",
+            "example3": "Es un problema de marketing. Saludos,",
+            "explanation3": "Aunque está escrito de manera clara y sin errores, **no dice nada útil para el jefe**: no desarrolla la idea, no usa datos del informe y no responde ninguna de las preguntas. Por tanto, debe recibir 0 puntos."
+          },
+          "1": {
+            "label": "Claridad limitada: se identifican varias frases confusas, mal estructuradas o redundantes. La lectura requiere esfuerzo y el mensaje no fluye naturalmente. Las ideas aparecen sin una secuencia lógica o con expresiones poco precisas.",
+            "example1": "Buenas tardes Luis,\nEl motivo de la baja en las ventas puede ser que los clientes ya compraron el año pasado aires frío calor, por lo que al tener un producto que sirve para todo el año no necesitan volver a gastar en estufas o ventiladores. Esto hace que el mercado se reduzca y que tengamos que pensar otras opciones, que puede ser también revisar las importaciones para ver si hay faltantes, porque si no hay stock tampoco se puede vender, y además ver si conviene traer más aires para el verano.",
+            "explanation1": "Contiene frases largas, ideas mezcladas y explicaciones redundantes. El orden es poco claro y el texto no fluye naturalmente. Requiere esfuerzo del lector para seguir el argumento.",
+            "example2": "Hola, para solucionar el problema habría que bajar un poco el precio de las estufas y ventiladores, así se venden más. Igual creo que el aire acondicionado se vende mejor porque tiene frío y calor, por eso la gente lo elige más.",
+            "explanation2": "Las ideas están poco conectadas y aparecen sin un hilo claro. Hay falta de precisión y razonamientos incompletos. La lectura no es fluida.",
+            "example3": "Hola Luis, parece ser un problema en la estacionalidad del marketing, pero necesito más información. Saludos,",
+            "explanation3": "Responde algo, pero de forma superficial y sin desarrollar. No quedaría claro para el jefe cuál es el diagnóstico o cuáles son las posibles soluciones."
+          },
+          "2": {
+            "label": "Claridad aceptable pero mejorable: el texto se comprende en general, aunque contiene algunas oraciones extensas, o formulaciones poco naturales que interrumpen la fluidez. Puede haber alguna repetición de ideas. Requiere algo de esfuerzo para seguir el hilo.",
+            "example1": "Hola Luis,\nEstuve revisando el informe con los gráficos de ventas y noté que el descenso en la sede Norte se concentra principalmente los viernes, el resto de la semana las ventas se mantienen estables, puede ser que el trabajo remoto de los empleados administrativos esté afectando la concurrencia al comedor esos días.\nTambién influye que el menú se repite seguido, lo que puede desmotivar a algunos empleados a almorzar en la empresa. De todas formas, no parece ser el principal motivo.\nSería útil revisar la cantidad de personal presente los viernes y ajustar la oferta o las promociones para equilibrar las ventas entre sedes.\nSaludos,",
+            "explanation1": "El texto es claro en general, pero tiene oraciones largas y algunas formulaciones que interrumpen la fluidez. Hay momentos en que el hilo se vuelve menos directo. Aun así, se entiende sin dificultad.",
+            "example2": "En relación con la consulta que me enviaste, analicé los datos del informe y observo que las ventas de aires acondicionados en 2024 se mantuvieron bastante similares a las de 2023.\nA partir de la tabla de unidades pedidas y entregadas, se nota que en ventiladores y estufas hubo una leve diferencia a favor de los productos entregados, mientras que en aires acondicionados la cantidad recibida fue algo menor, especialmente en el segundo semestre.\nConsidero que esta menor disponibilidad puede haber afectado las ventas, más que una caída en la demanda, como sugerencia, propondría equilibrar los pedidos de los tres productos para evitar faltantes en los próximos períodos.",
+            "explanation2": "Es comprensible, pero contiene oraciones extensas y algunas transiciones poco naturales. El flujo no es impecable y requiere algo de esfuerzo para seguir el razonamiento."
+          },
+          "3": {
+            "label": "Claridad y legibilidad destacadas: el texto es muy claro y fluido. Las oraciones están bien construidas, no hay ambigüedades, o repetición de ideas. Se lee con naturalidad.",
+            "example1": "Hola Luis,\nEstuve revisando el informe y noté que las ventas de aires acondicionados se mantuvieron estables en 2024, mientras que las de estufas y ventiladores bajaron respecto de 2023.\nNo parece haber problemas de importación, pero sí un cambio en las campañas: se publicitaron productos fuera de temporada.\nSugiero volver a ajustar las promociones al clima —ventiladores en verano y estufas en invierno— para recuperar las ventas.\nSaludos,",
+            "explanation1": "El texto es claro, directo y bien secuenciado. No hay redundancias ni ambigüedades. Las ideas fluyen naturalmente y la organización es muy buena.",
+            "example2": "Hola Luis,\nEn 2024 las ventas de aires acondicionados mantuvieron el mismo patrón que en 2023: suben en verano y bajan en invierno, sin cambios significativos. Tampoco se observan efectos por trabas a la importación.\nEl problema parece estar en las campañas: este año no se promocionaron ventiladores en verano ni estufas en invierno, lo que explica la pérdida de los picos estacionales.\nSugiero volver a alinear las promociones con las temporadas para recuperar las ventas en esos productos.\nSaludos,",
+            "explanation2": "La redacción es muy clara y fácil de leer. Cada idea está expresada con precisión y en orden lógico. No hay repeticiones ni ambigüedades. La claridad y la economía de palabras son sobresalientes."
+          }
+        }
+      },
+      "3": {
+        "name": "Organización del texto",
+        "description": "Se evalúa la estructura y el orden interno del texto. Debe seguir una secuencia lógica que incluya:\n1. una introducción que enmarque el mensaje o un saludo (por ejemplo, 'Hola XX, cómo estás?' o una breve referencia al mail del jefe),\nEjemplo de referencia al mail del jefe: “Revisé los datos que me enviaste y encontré lo siguiente:”\n2. un desarrollo en el que se respondan las preguntas planteadas,\n3. una sección con propuestas o sugerencias para resolver el problema, y\n4. un cierre que retome las ideas principales o una despedida.\nEjemplos de cierre o saludo:\n1.“Estoy a disposición para discutir cómo implementar las mejoras.”\n2.'Saludos,'\nTambién se valora la organización interna dentro de cada sección: el uso adecuado de párrafos, la coherencia en la secuencia de ideas y la ausencia de saltos temáticos.",
+        "note": "Tanto un saludo como una referencia al mail del jefe cuentan como introducción, y tanto una despedida como un cierre que retome la ideas principales o que diga 'Quedo a disposición' cuentan como cierre.",
+        "scores": {
+          "0": {
+            "label": "Texto desorganizado o sin estructura reconocible: no se distinguen las secciones principales o las ideas aparecen mezcladas y repetidas. Falta orden tanto en la estructura general como dentro de los párrafos.",
+            "example": "lo que habría que hacer es poner descuentos o algo así porque la gente no compra como antes, está todo muy caro y la situación económica no ayuda, además los otros negocios también hacen promociones y hay que competir, aunque igual depende del tipo de producto porque algunos no se venden ni con oferta, pero habría que intentar con algo para ver si suben las ventas porque la cosa está difícil y uno no se puede quedar quieto.",
+            "explanation": "El texto no presenta una estructura reconocible: no hay introducción, desarrollo ni cierre. Las ideas aparecen mezcladas en un único bloque, sin orden ni párrafos, y con saltos temáticos que dificultan seguir el hilo."
+          },
+          "1": {
+            "label": "Estructura débil o confusa: se percibe cierta intención de organización, pero faltan secciones o están mal delimitadas. Dentro de cada parte hay mezcla de ideas o saltos que dificultan la lectura. Los párrafos no agrupan bien las ideas.",
+            "example": "Hola buenas tardes Luis, estuve viendo los datos y me parece que las ventas bajaron un poco, puede ser por el tema de las promociones o de la financiación, porque últimamente los bancos no están ofreciendo muchas cuotas y eso complica a los clientes. Capaz habría que revisar eso o ver si se pueden hacer descuentos para incrementar las ventas.",
+            "explanation": "Hay un saludo, pero no se distinguen las secciones principales. Todo está en un solo párrafo largo con ideas mezcladas entre diagnóstico y propuestas. La organización interna es débil y no sigue una secuencia clara."
+          },
+          "2": {
+            "label": "Organización parcial o irregular: el texto incluye la mayoría de las secciones, pero el orden o la articulación entre ellas es poco clara. Algunas partes están bien organizadas, mientras que otras presentan saltos. Los párrafos son comprensibles pero desbalanceados.",
+            "example": "Estimado,\nEstuve revisando los datos y noté que las ventas de aires acondicionados se mantuvieron estables, sin diferencias respecto al año anterior. En cambio, en estufas y ventiladores sí hubo una caída, aunque no parece deberse a problemas con el importador. Considero que puede estar relacionada con la falta de promoción en los meses correspondientes y con una mayor competencia en el rubro.\nSería conveniente reforzar la comunicación de estos productos en los períodos estacionales y revisar si las campañas se están enviando en los momentos adecuados.\nSin más, lo saludo atentamente.",
+            "explanation": "Incluye introducción, desarrollo, propuestas y cierre, pero el orden no es del todo claro y algunas ideas aparecen mezcladas. La organización dentro de los párrafos es desigual: algunas partes están bien agrupadas y otras tienen saltos o cambios súbitos de foco."
+          },
+          "3": {
+            "label": "Organización clara y coherente: el texto sigue la secuencia esperada (introducción, respuestas, propuestas, cierre) y las ideas dentro de cada sección están bien agrupadas. Hay un uso adecuado de párrafos, aunque las transiciones o la progresión de ideas podrían ser más fluidas.",
+            "example": "Buen día Luis,\nEstuve revisando los datos y noto que en 2024 las ventas de estufas y ventiladores perdieron el comportamiento estacional habitual. No parece que haya sido por problemas de importación, ya que los aires acondicionados mantuvieron un nivel de ventas normal.\nCreo que el principal factor puede ser la falta de campañas o promociones en los meses correspondientes. Sería importante retomar las estrategias de marketing estacional, promocionando ventiladores y aires acondicionados en verano, y estufas en invierno. También podría ser útil medir cómo reaccionan las ventas después de estos ajustes y evaluar otros canales como redes sociales o promociones en tienda.\nQuedo a disposición para avanzar con estas ideas.\nSaludos,",
+            "explanation": "El texto sigue una estructura general adecuada (saludo, diagnóstico, propuestas, cierre) y las ideas están bien agrupadas. Sin embargo, el diagnóstico y las propuestas aparecen mezclados dentro del mismo párrafo, lo que interrumpe la separación clara entre secciones requerida para una organización excelente."
+          },
+          "4": {
+            "label": "Organización excelente: el texto presenta una estructura completa y equilibrada: cada sección cumple su función, las ideas dentro de cada una están ordenadas, y las transiciones entre párrafos son naturales. La organización general y la interna contribuyen a una lectura fluida y lógica.",
+            "example": "Hola Luis, ¿cómo estás?\nEstuve revisando los datos y en 2024 las ventas de aires acondicionados mantuvieron el mismo comportamiento estacional que en 2023: aumentaron en verano y bajaron en invierno.\nEn cuanto a las importaciones, no se observó un impacto significativo en las ventas ni en la disponibilidad de los productos.\nEl principal cambio parece estar en la promoción. Este año no hubo campañas específicas de ventiladores en verano ni de estufas en invierno, lo que puede explicar la falta de picos estacionales. En cambio, los aires acondicionados sí se promocionaron en los momentos clave.\nMi recomendación es retomar las campañas estacionales para recuperar los niveles habituales de venta. Con una comunicación adecuada y en los momentos justos, deberíamos poder restablecer el patrón de ventas esperado.\nQuedo atento a tus comentarios.\nSaludos,",
+            "explanation": "La estructura es completa: introducción clara, diagnóstico, propuestas y cierre adecuado. Los párrafos están perfectamente organizados y las transiciones son naturales, lo que permite una lectura fluida y lógica."
+          }
+        }
+      },
+      "4": {
+        "name": "Registro adecuado",
+        "description": "Se evalúa si el tono del mail es apropiado para el contexto laboral y coherente con el tono del mail del jefe. El tono no debe ser excesivamente informal, debe ser cortes y profesional.\nEl criterio penaliza automáticamente (0 puntos) los casos en los que:\n1.El texto esté completamente escrito en mayúsculas (por considerarse una forma inapropiada o agresiva de comunicación).\n2. El texto incluya rastros evidentes de generación automática o placeholders propios de un asistente virtual, como firmas incompletas del tipo “[tu nombre]”, o texto no reemplazado.",
+        "note1": "En este criterio no se evalúa la presencia o la falta de saludo y despedida",
+        "note2": "Mencionar explícitamente que se utilizó una herramienta de IA para elaborar el diagnóstico **no se penaliza**",
+        "scores": {
+          "0": {
+            "label": "El tono del mail es demasiado informal, coloquial o poco cortés en relación con el tono del mail del jefe. También se asigna 0 puntos si el texto está completamente en mayúsculas, si deja evidencia explícita de interacción con ChatGPT u otra IA, o si el texto no presenta un tono profesional acorde al mail del jefe.",
+            "example1": "Buenas,\nSegún el informe que me mandaste creo que el problema está en la falta de estacional en las campañas de publicidad de las estufas y ventiladores. También puede influir que los aires acondicionados tiran frío y calor, y que este último año hubo crisis económica en Argentina.\nAbrazo,",
+            "explanation1": "El tono es excesivamente informal para un intercambio laboral: usa saludos coloquiales (“Buenas”, “Abrazo”). No mantiene la formalidad esperable en el contexto definido por el mail del jefe.",
+            "example2": "Hola Luis, ¿cómo estás?\nSegún el informe que me mandaste creo que el problema está en la falta de estacional en las campañas de publicidad de las estufas y ventiladores. También puede influir que los aires acondicionados tiran frío y calor, y que este último año hubo crisis económica en Argentina.\nSaludos,\n[Tu nombre]",
+            "explanation2": "Incluye un placeholder típico de un asistente virtual ('[tu nombre]'), lo cual activa la penalización automática.",
+            "example3": "HOLA LUIS, ¿CÓMO ESTÁS?\nSEGÚN EL INFORME QUE ME MANDASTE CREO QUE EL PROBLEMA ESTÁ EN LA FALTA DE ESTACIONAL EN LAS CAMPAÑAS DE PUBLICIDAD DE LAS ESTUFAS Y VENTILADORES. TAMBIÉN PUEDE INFLUIR QUE LOS AIRES ACONDICIONADOS TIRAN FRÍO Y CALOR, Y QUE ESTE ÚLTIMO AÑO HUBO CRISIS ECONÓMICA EN ARGENTINA.\nSALUDOS CORDIALES,",
+            "explanation3": "El texto está completamente en mayúsculas, lo cual se considera un tono inadecuado o agresivo en comunicación escrita. Esto activa automáticamente el puntaje 0, independientemente del contenido."          
+          },
+          "1": {
+            "label": "Registro adecuado: el tono es respetuoso y coherente acorde con el tono del mail del jefe. El texto mantiene un registro profesional y apropiado para el contexto laboral.",
+            "example": "Hola Luis, ¿cómo estás?\nSegún el informe que me mandaste creo que el problema está en la falta de estacional en las campañas de publicidad de las estufas y ventiladores. También puede influir que los aires acondicionados tiran frío y calor, y que este último año hubo crisis económica en Argentina.\nSaludos cordiales,",
+            "explanation": "El tono es respetuoso, profesional y consistente con el mail del jefe. Aunque el estilo es sencillo e informal en algunos lugares, se mantiene dentro de un registro cortés y adecuado para el contexto laboral, sin señales de IA ni marcas impropias."
+          }
+        }
+      }
+    }
+  }
+}
