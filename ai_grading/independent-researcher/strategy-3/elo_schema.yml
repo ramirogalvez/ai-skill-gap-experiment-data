@@ -1,0 +1,33 @@
+type: object
+description: >
+  Ranking de varias respuestas a la misma tarea, ordenadas de mejor a peor
+  según la rúbrica pre-registrada (contenido y escritura) y el criterio indicado.
+properties:
+  criterion:
+    type: string
+    description: >
+      Criterio utilizado para el ranking (por ejemplo: "overall", "content", "writing").
+      Por defecto se espera "overall", es decir, el puntaje global implícito
+      basado en 2/3 contenido y 1/3 escritura según la rúbrica del experimento.
+  ranking:
+    type: array
+    description: >
+      Lista de IDs de respuestas, ordenadas de MEJOR a PEOR según el criterio.
+      Debe incluir exactamente una vez cada id presente en las etiquetas <ANSWER id="...">
+      del pseudo-XML de entrada. No se permiten empates.
+    items:
+      type: string
+  rationales:
+    type: object
+    description: >
+      Comentarios breves y opcionales que justifican el orden. Cada clave debe ser
+      un ID de respuesta (exactamente igual al atributo id en el pseudo-XML) y
+      el valor un texto breve en español con una explicación de por qué esa respuesta
+      se ubica aproximadamente en esa posición del ranking.
+    additionalProperties:
+      type: string
+
+required:
+  - criterion
+  - ranking
+

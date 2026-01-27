@@ -1,0 +1,238 @@
+type: object
+properties:
+  flags:
+    type: object
+    description: "Metadatos básicos sobre la respuesta evaluada."
+    properties:
+      char_count:
+        type: integer
+        description: "Número de caracteres de la respuesta del participante (solo el texto entre <<<RESPUESTA_PARTICIPANTE>>> y <<<FIN_RESPUESTA_PARTICIPANTE>>>). Este valor lo calcula la herramienta a partir del texto recibido; el modelo no necesita contarlos."
+        minimum: 0
+      too_short_for_writing:
+        type: boolean
+        description: "True si la respuesta parece claramente muy corta (por ejemplo, una o dos frases), posible candidata a la regla de <200 caracteres."
+      off_topic:
+        type: boolean
+        description: "True si la respuesta está casi completamente fuera de tema o no se relaciona con la consigna ni con los datos del informe."
+    required:
+      - too_short_for_writing
+      - off_topic
+
+  content:
+    type: object
+    description: "Puntuaciones y comentarios sobre el contenido (diagnóstico y solución)."
+    properties:
+      diagnosis_q1:
+        type: object
+        description: "Diagnóstico para la primera pregunta específica del jefe/jefa."
+        properties:
+          score:
+            type: integer
+            minimum: 0
+            maximum: 2
+            description: "0 = incorrecto / no responde; 1 = parcialmente correcto; 2 = correcto y bien fundamentado."
+          comment:
+            type: string
+            description: "Breve explicación en español del por qué de esta puntuación en la primera pregunta de diagnóstico."
+        required:
+          - score
+          - comment
+
+      diagnosis_q2:
+        type: object
+        description: "Diagnóstico para la segunda pregunta específica del jefe/jefa."
+        properties:
+          score:
+            type: integer
+            minimum: 0
+            maximum: 2
+            description: "0 = incorrecto / no responde; 1 = parcialmente correcto; 2 = correcto y bien fundamentado."
+          comment:
+            type: string
+            description: "Breve explicación en español del por qué de esta puntuación en la segunda pregunta de diagnóstico."
+        required:
+          - score
+          - comment
+
+      diagnosis_q3:
+        type: object
+        description: "Diagnóstico para la tercera pregunta específica del jefe/jefa (ligada a la causa raíz del problema)."
+        properties:
+          score:
+            type: integer
+            minimum: 0
+            maximum: 2
+            description: "0 = incorrecto / no responde; 1 = parcialmente correcto; 2 = correcto y bien fundamentado respecto de la causa raíz."
+          comment:
+            type: string
+            description: "Breve explicación en español del por qué de esta puntuación en la tercera pregunta de diagnóstico."
+        required:
+          - score
+          - comment
+
+      solution_root_cause:
+        type: object
+        description: "¿La solución propuesta ataca la causa raíz del problema?"
+        properties:
+          score:
+            type: integer
+            minimum: 0
+            maximum: 1
+            description: "1 si la solución ataca claramente la causa raíz según los datos; 0 si no."
+          comment:
+            type: string
+            description: "Breve explicación en español de si la propuesta ataca o no la causa raíz."
+        required:
+          - score
+          - comment
+
+      solution_specificity:
+        type: object
+        description: "Grado de concreción y especificidad de la solución propuesta, siempre y cuando apunte a la causa raíz."
+        properties:
+          score:
+            type: integer
+            minimum: 0
+            maximum: 2
+            description: "0 = vaga/inexistente; 1 = algo concreta pero incompleta; 2 = concreta y accionable."
+          comment:
+            type: string
+            description: "Breve explicación en español de cuán concreta y específica es la propuesta."
+        required:
+          - score
+          - comment
+
+      solution_realism:
+        type: object
+        description: "Realismo de la solución dada el contexto del negocio."
+        properties:
+          score:
+            type: integer
+            minimum: 0
+            maximum: 1
+            description: "1 si la solución es razonable y factible; 0 si es claramente irreal o desproporcionada."
+          comment:
+            type: string
+            description: "Breve explicación en español del grado de realismo de la propuesta."
+        required:
+          - score
+          - comment
+
+      content_total:
+        type: integer
+        minimum: 0
+        maximum: 10
+        description: "Puntaje total de contenido (0–10), sumando diagnóstico (0–6) y solución (0–4). Debe respetar la regla de pasa/no pasa: si solution_root_cause.score = 0, entonces los puntos de solución son 0."
+    required:
+      - diagnosis_q1
+      - diagnosis_q2
+      - diagnosis_q3
+      - solution_root_cause
+      - solution_specificity
+      - solution_realism
+      - content_total
+
+  writing:
+    type: object
+    description: "Puntuaciones y comentarios sobre la calidad de la escritura."
+    properties:
+      spelling_grammar:
+        type: object
+        description: "Ortografía y gramática."
+        properties:
+          score:
+            type: integer
+            minimum: 0
+            maximum: 2
+            description: "0 = muy pobre; 1 = errores frecuentes pero entendible; 2 = en general correcto, solo errores menores."
+          comment:
+            type: string
+            description: "Breve comentario en español sobre ortografía y gramática."
+        required:
+          - score
+          - comment
+
+      clarity:
+        type: object
+        description: "Claridad y legibilidad del texto."
+        properties:
+          score:
+            type: integer
+            minimum: 0
+            maximum: 3
+            description: "0 = muy confuso; 1 = bastante confuso; 2 = en general claro; 3 = muy claro."
+          comment:
+            type: string
+            description: "Breve comentario en español sobre claridad y facilidad de comprensión."
+        required:
+          - score
+          - comment
+
+      organization:
+        type: object
+        description: "Organización y estructura general del correo."
+        properties:
+          score:
+            type: integer
+            minimum: 0
+            maximum: 4
+            description: "0 = casi sin estructura; 1 = organización pobre; 2 = aceptable pero desprolija; 3 = buena; 4 = excelente organización tipo correo profesional."
+          comment:
+            type: string
+            description: "Breve comentario en español sobre la estructura (saludo, cuerpo, cierre, orden de ideas, separación de temas, etc.)."
+        required:
+          - score
+          - comment
+
+      tone_register:
+        type: object
+        description: "Tono y registro frente a la persona jefa / dueña."
+        properties:
+          score:
+            type: integer
+            minimum: 0
+            maximum: 1
+            description: "1 = tono profesional y respetuoso; 0 = tono inadecuado (demasiado coloquial, grosero, burlón, etc.)."
+          comment:
+            type: string
+            description: "Breve comentario en español sobre el tono y la adecuación al registro profesional."
+        required:
+          - score
+          - comment
+
+      writing_total:
+        type: integer
+        minimum: 0
+        maximum: 10
+        description: "Puntaje total de escritura (0–10), suma de las cuatro subdimensiones según la rúbrica."
+    required:
+      - spelling_grammar
+      - clarity
+      - organization
+      - tone_register
+      - writing_total
+
+  overall:
+    type: object
+    description: "Resumen de puntajes globales."
+    properties:
+      overall_score:
+        type: number
+        minimum: 0
+        maximum: 10
+        description: "Puntaje global (0–10), calculado como (2/3)*content.content_total + (1/3)*writing.writing_total."
+      root_cause_q3_correct:
+        type: boolean
+        description: "True si el participante identificó correctamente la causa raíz (diagnosis_q3.score >= 1), false si no."
+      notes_overall:
+        type: string
+        description: "Comentario breve y global sobre el desempeño, opcional."
+    required:
+      - overall_score
+      - root_cause_q3_correct
+
+required:
+  - flags
+  - content
+  - writing
+  - overall
