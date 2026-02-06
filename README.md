@@ -7,66 +7,72 @@ These files are provided for **transparency** and **replicability**: they docume
 ## Repository structure
 
 ```text
-main-pipeline/
-  system-prompts/
-    task_grading_system_prompt.md
-    followup_grading_system_prompt.md
-  rubrics/
-    task/
-      rest_task_guides.json
-      lunch_task_guides.json
-      sales_task_guides.json
-    followup/
-      rest_fup_guides.json
-      lunch_fup_guides.json
-      sales_fup_guides.json
+ai_grading/
+  main-pipeline/
+    system-prompts/
+      task_grading_system_prompt.md
+      followup_grading_system_prompt.md
+    rubrics/
+      task/
+        rest_task_guides.json
+        lunch_task_guides.json
+        sales_task_guides.json
+      followup/
+        rest_fup_guides.json
+        lunch_fup_guides.json
+        sales_fup_guides.json
 
-independent-researcher/
-  strategy-1/
-    gpt-5.1-pro-generic-rubric-prompts.md
-    grader_prompt_v1.md
-  strategy-2/
-    gpt-5.1-pro-detailed-rubric-prompts.md
-    grader_prompt_v2.md
-    grader_schema.yml
-    task-materials/
-      lunch/
-        detailed_task_facts_lunch.md
-        detailed_task_rubric_lunch.md
-      rest/
-        detailed_task_facts_rest.md
-        detailed_task_rubric_rest.md
-      sales/
-        detailed_task_facts_sales.md
-        detailed_task_rubric_sales.md
-  strategy-3/
-    elo_prompt.md
-    elo_schema.yml
+  independent-researcher/
+    strategy-1/
+      gpt-5.1-pro-generic-rubric-prompts.md
+      grader_prompt_v1.md
+    strategy-2/
+      gpt-5.1-pro-detailed-rubric-prompts.md
+      grader_prompt_v2.md
+      grader_schema.yml
+      task-materials/
+        lunch/
+          detailed_task_facts_lunch.md
+          detailed_task_rubric_lunch.md
+        rest/
+          detailed_task_facts_rest.md
+          detailed_task_rubric_rest.md
+        sales/
+          detailed_task_facts_sales.md
+          detailed_task_rubric_sales.md
+    strategy-3/
+      elo_prompt.md
+      elo_schema.yml
 
 ai-use-classification/
   system-prompts/
     classification_prompt.md
+
+LICENSE
+README.md
 ```
 
 ## What each folder contains
 
-### `main-pipeline/`
+Top level: `ai_grading/` (grading assets) and `ai-use-classification/` (usage taxonomy). `LICENSE` and this `README.md` sit at the repo root.
+
+### `ai_grading/main-pipeline/`
 
 Inputs to the **main AI-assisted grading pipeline** used in the paper.
 
-* `main-pipeline/system-prompts/`
+* `ai_grading/main-pipeline/system-prompts/`
 
   * `task_grading_system_prompt.md`: system prompt used to grade **main task** responses.
   * `followup_grading_system_prompt.md`: system prompt used to grade the **follow-up open-ended** response.
 
-* `main-pipeline/rubrics/`
+* `ai_grading/main-pipeline/rubrics/`
 
   * `task/*_task_guides.json`: task-specific JSON rubrics for the **main task**.
   * `followup/*_fup_guides.json`: task-specific JSON rubrics for the **follow-up** open-ended question.
 
 Each JSON rubric includes the full task context (email + attached report components) and the detailed scoring instructions used by the grading model.
 
-### `independent-researcher/`
+### `ai_grading/independent-researcher/`
 
 Materials used by an **independent researcher** (not involved in the main pipeline development) to implement alternative AI-assisted grading strategies for robustness.
 
