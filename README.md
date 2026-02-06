@@ -1,8 +1,8 @@
 # ai-skill-gap-experiment-data
 
-This repository contains the **system prompts**, **task-specific grading rubrics**, and **independent-researcher materials** used for the **AI-assisted scoring pipeline** in our AI productivity-gap experiment.
+This repository contains the **system prompts**, **task-specific grading rubrics**, **independent-researcher materials**, and **AI-use classification materials** used in our AI productivity-gap experiment.
 
-These files are provided for **transparency** and **replicability**: they document exactly what was shown to the grading models (system prompts) and the complete rubric specifications used to score each task version.
+These files are provided for **transparency** and **replicability**: they document exactly what was shown to the grading/classification models (system prompts) and the complete rubric or schema specifications used throughout the analysis.
 
 ## Repository structure
 
@@ -42,6 +42,10 @@ independent-researcher/
   strategy-3/
     elo_prompt.md
     elo_schema.yml
+
+ai-use-classification/
+  system-prompts/
+    classification_prompt.md
 ```
 
 ## What each folder contains
@@ -69,6 +73,13 @@ Materials used by an **independent researcher** (not involved in the main pipeli
 * `strategy-1/`: single-step grading using an LLM-generated rubric and evaluator prompt.
 * `strategy-2/`: same rubric approach augmented with task-specific fact sheets and a YAML output schema.
 * `strategy-3/`: pairwise-comparison approach aggregated using an Elo rating system (prompt + YAML schema).
+
+### `ai-use-classification/`
+
+Materials used to **classify treated participants’ patterns of interaction** with the AI assistant (Appendix: *Classification of patterns of AI use*).
+
+* `ai-use-classification/system-prompts/classification_prompt.md`:
+  system prompt (taxonomy + coding instructions + output schema) used to classify participant conversations with the AI assistant.
 
 ## Mapping of task versions
 
