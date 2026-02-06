@@ -1,78 +1,74 @@
 # ai-skill-gap-experiment-data
 
-This repository contains the **system prompts**, **task-specific grading rubrics**, **independent-researcher materials**, and **AI-use classification materials** used in our AI productivity-gap experiment.
+This repository contains the **system prompts** and **task-specific grading rubrics** used for the **AI-assisted grading** of responses in our randomized experiment on whether generative AI narrows skill-based productivity gaps, along with (i) materials from an **independent researcher** who implemented alternative AI-assisted grading strategies for robustness checks and (ii) the prompt used to **classify patterns of AI use**.
 
-These files are provided for **transparency** and **replicability**: they document exactly what was shown to the grading/classification models (system prompts) and the complete rubric or schema specifications used throughout the analysis.
+These files are provided for **transparency** and **replicability**: they document exactly what was shown to the grading models (system prompts) and the complete rubric specifications used to score each task version.
 
 ## Repository structure
 
 ```text
-ai_grading/
-  main-pipeline/
-    system-prompts/
-      task_grading_system_prompt.md
-      followup_grading_system_prompt.md
-    rubrics/
-      task/
-        rest_task_guides.json
-        lunch_task_guides.json
-        sales_task_guides.json
-      followup/
-        rest_fup_guides.json
-        lunch_fup_guides.json
-        sales_fup_guides.json
+README.md
+LICENSE
 
-  independent-researcher/
-    strategy-1/
-      gpt-5.1-pro-generic-rubric-prompts.md
-      grader_prompt_v1.md
-    strategy-2/
-      gpt-5.1-pro-detailed-rubric-prompts.md
-      grader_prompt_v2.md
-      grader_schema.yml
-      task-materials/
-        lunch/
-          detailed_task_facts_lunch.md
-          detailed_task_rubric_lunch.md
-        rest/
-          detailed_task_facts_rest.md
-          detailed_task_rubric_rest.md
-        sales/
-          detailed_task_facts_sales.md
-          detailed_task_rubric_sales.md
-    strategy-3/
-      elo_prompt.md
-      elo_schema.yml
+main-pipeline/
+  system-prompts/
+    task_grading_system_prompt.md
+    followup_grading_system_prompt.md
+  rubrics/
+    task/
+      rest_task_guides.json
+      lunch_task_guides.json
+      sales_task_guides.json
+    followup/
+      rest_fup_guides.json
+      lunch_fup_guides.json
+      sales_fup_guides.json
+
+independent-researcher/
+  strategy-1/
+    gpt-5.1-pro-generic-rubric-prompts.md
+    grader_prompt_v1.md
+  strategy-2/
+    gpt-5.1-pro-detailed-rubric-prompts.md
+    grader_prompt_v2.md
+    grader_schema.yml
+    task-materials/
+      lunch/
+        detailed_task_facts_lunch.md
+        detailed_task_rubric_lunch.md
+      rest/
+        detailed_task_facts_rest.md
+        detailed_task_rubric_rest.md
+      sales/
+        detailed_task_facts_sales.md
+        detailed_task_rubric_sales.md
+  strategy-3/
+    elo_prompt.md
+    elo_schema.yml
 
 ai-use-classification/
-  system-prompts/
-    classification_prompt.md
-
-LICENSE
-README.md
+  classification_prompt.md
 ```
 
 ## What each folder contains
 
-Top level: `ai_grading/` (grading assets) and `ai-use-classification/` (usage taxonomy). `LICENSE` and this `README.md` sit at the repo root.
-
-### `ai_grading/main-pipeline/`
+### `main-pipeline/`
 
 Inputs to the **main AI-assisted grading pipeline** used in the paper.
 
-* `ai_grading/main-pipeline/system-prompts/`
+* `main-pipeline/system-prompts/`
 
   * `task_grading_system_prompt.md`: system prompt used to grade **main task** responses.
   * `followup_grading_system_prompt.md`: system prompt used to grade the **follow-up open-ended** response.
 
-* `ai_grading/main-pipeline/rubrics/`
+* `main-pipeline/rubrics/`
 
   * `task/*_task_guides.json`: task-specific JSON rubrics for the **main task**.
   * `followup/*_fup_guides.json`: task-specific JSON rubrics for the **follow-up** open-ended question.
 
 Each JSON rubric includes the full task context (email + attached report components) and the detailed scoring instructions used by the grading model.
 
-### `ai_grading/independent-researcher/`
+### `independent-researcher/`
 
 Materials used by an **independent researcher** (not involved in the main pipeline development) to implement alternative AI-assisted grading strategies for robustness.
 
@@ -82,10 +78,9 @@ Materials used by an **independent researcher** (not involved in the main pipeli
 
 ### `ai-use-classification/`
 
-Materials used to **classify treated participants’ patterns of interaction** with the AI assistant (Appendix: *Classification of patterns of AI use*).
+Materials used to classify participants’ patterns of interaction with the AI assistant.
 
-* `ai-use-classification/system-prompts/classification_prompt.md`:
-  system prompt (taxonomy + coding instructions + output schema) used to classify participant conversations with the AI assistant.
+* `classification_prompt.md`: system prompt used to classify treated participants’ AI-assistant conversations.
 
 ## Mapping of task versions
 
